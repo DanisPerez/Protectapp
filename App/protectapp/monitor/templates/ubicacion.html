@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect - Ubicación en Tiempo Real</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+<<<<<<< HEAD
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        body { font-family: 'Nunito', sans-serif; background-color: #eef2f7; }
+        .sidebar { width: 240px; height: 100vh; background: #343a40; padding: 20px; position: fixed; }
+        .sidebar .logo img { width: 120px; margin-bottom: 30px; border-radius: 10px; }
+        .sidebar a { display: flex; align-items: center; padding: 10px; color: #adb5bd; text-decoration: none; border-radius: 5px; }
+        .sidebar a.active, .sidebar a:hover { background-color: #495057; color: #fff; }
+        .sidebar a i { margin-right: 10px; }
+        .main-content { margin-left: 260px; padding: 40px; min-height: 100vh; }
+        .content-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; }
+        footer { padding: 10px; background-color: #343a40; color: #adb5bd; text-align: center; }
+        .map-container { width: 100%; height: 400px; margin-bottom: 20px; }
+        #map { width: 100%; height: 100%; border-radius: 10px; }
+        .loading-message { text-align: center; color: #6c757d; font-style: italic; }  /* Indicador de carga */
+    </style>
+</head>
+<<<<<<< HEAD
+
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+=======
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #eef2f7;
+        }
+
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background: #343a40;
+            padding: 20px;
+            position: fixed;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .logo img {
+            width: 120px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #adb5bd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #495057;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .user-dropdown a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .user-dropdown a:hover {
+            background-color: #6c757d;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .loading-message {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #343a40;
+            color: #adb5bd;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<<<<<<< HEAD
+
+
+
+
+
+
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+            <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
+        </div>
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="#" id="registro-link"><i class="fas fa-list"></i> Registro</a>
+<<<<<<< HEAD
+
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+        </div>
+
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="{% url 'reg_event' %}"><i class="fas fa-list"></i> Registro</a>
+
+
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="{% url 'panel_control' %}"><i class="fas fa-cogs"></i> Panel de Control</a>
+
+
+=======
+=======
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+        </div>
+<<<<<<< HEAD
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="{% url 'reg_event' %}"><i class="fas fa-list"></i> Registro</a>
+=======
+<<<<<<< HEAD
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="{% url 'panel_control' %}"><i class="fas fa-cogs"></i> Panel de Control</a>
+=======
+<<<<<<< HEAD
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        <a href="mis_dispositivos.html"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="panel_control.html"><i class="fas fa-cogs"></i> Panel de Control</a>
+        <a href="registro.html"><i class="fas fa-list"></i> Registro</a>
+        <a href="archivo_telefono.html"><i class="fas fa-folder-open"></i> Archivo de Teléfono</a>
+        <a href="ubicacion.html" class="active"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+        <a href="grabacion.html"><i class="fas fa-microphone"></i> Grabación en Tiempo Real</a>
+        <a href="capturas.html"><i class="fas fa-camera"></i> Capturas</a>
+        <a href="exportar_datos.html"><i class="fas fa-file-export"></i> Exportar Datos</a>
+        <a href="verificacion_permisos.html"><i class="fas fa-shield-alt"></i> Verificación de Permisos</a>
+<<<<<<< HEAD
+
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+        <a href="{% url 'registro' %}"><i class="fas fa-list"></i> Registro</a>
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+=======
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+        <a href="{% url 'registro' %}"><i class="fas fa-list"></i> Registro</a>
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        <a href="{% url 'archivo_telefono' %}"><i class="fas fa-folder-open"></i> Archivo de Teléfono</a>
+        <a href="{% url 'ubicacion' %}" class="active"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+        <a href="{% url 'grabacion' %}"><i class="fas fa-microphone"></i> Grabación en Tiempo Real</a>
+        <a href="{% url 'capturas' %}"><i class="fas fa-camera"></i> Capturas</a>
+        <a href="{% url 'exportar_datos' %}"><i class="fas fa-file-export"></i> Exportar Datos</a>
+        <a href="{% url 'verificacion_permisos' %}"><i class="fas fa-shield-alt"></i> Verificación de Permisos</a>
+<<<<<<< HEAD
+
+
+
+
+
+
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Ubicación en Tiempo Real</h2>
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+            <div class="user-info">
+                <img src="{% static 'img/cuenta.png' %}" alt="User Icon" id="user-icon">
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="{% url 'cuenta' %}">Mi Cuenta</a>
+                    <a href="{% url 'login' %}" onclick="logout()">Cerrar Sesión</a>
+                </div>
+            </div>
+<<<<<<< HEAD
+
+
+
+
+
+
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        </div>
+
+        <!-- Mapa de Google Maps -->
+        <div class="map-container">
+            <div id="map"></div>
+<<<<<<< HEAD
+
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+
+
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+
+
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+
+
+            <p class="loading-message" id="loading-map">Cargando mapa...</p> <!-- Indicador de carga -->
+
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+=======
+<<<<<<< HEAD
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+=======
+<<<<<<< HEAD
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+=======
+<<<<<<< HEAD
+            <p class="loading-message" id="loading-map">Cargando mapa...</p> <!-- Indicador de carga -->
+=======
+            <p class="loading-message" id="loading-map">Cargando mapa...</p>
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        </div>
+
+        <!-- Historial de ubicaciones -->
+        <h3>Historial de Ubicaciones</h3>
+<<<<<<< HEAD
+
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+
+
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+
+
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+
+
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p> <!-- Indicador de carga -->
+
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+=======
+<<<<<<< HEAD
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+=======
+<<<<<<< HEAD
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+=======
+<<<<<<< HEAD
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p> <!-- Indicador de carga -->
+=======
+        <p class="loading-message" id="loading-historial">Cargando historial de ubicaciones...</p>
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Latitud</th>
+                    <th>Longitud</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tbody id="historial-ubicaciones">
+                <!-- Historial será cargado dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+    </footer>
+
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<<<<<<< HEAD
+
+
+    <!-- Scripts -->
+
+
+    <!-- Scripts -->
+
+
+    <!-- Scripts de Bootstrap y Google Maps -->
+
+    <!-- Scripts -->
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+=======
+=======
+<<<<<<< HEAD
+    <!-- Scripts -->
+=======
+<<<<<<< HEAD
+    <!-- Scripts -->
+=======
+<<<<<<< HEAD
+    <!-- Scripts de Bootstrap y Google Maps -->
+=======
+    <!-- Scripts -->
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<<<<<<< HEAD
+
+
+
+
+
+    <script src="{% static 'js/ubicacion.js' %}"></script> <!-- Archivo de sondeo y gestión del mapa -->
+</body>
+
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <script src="{% static 'js/ubicacion.js' %}"></script> <!-- Archivo de sondeo y gestión del mapa -->
+</body>
+=======
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+    <script src="{% static 'js/ubicacion.js' %}"></script>
+
+    <script>
+        // Función para alternar el menú desplegable de usuario
+        document.getElementById('user-icon').addEventListener('click', function () {
+            const dropdown = document.getElementById('user-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+        });
+
+        // Cerrar el menú si se hace clic fuera de él
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('user-dropdown');
+            if (!event.target.closest('.user-info')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Función para cerrar sesión
+        function logout() {
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('refresh_token');
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}";
+        }
+
+        // Verificación de inicio de sesión
+        function checkLogin() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                alert('No has iniciado sesión. Redirigiendo a la página de inicio de sesión.');
+                window.location.href = "{% url 'login' %}";
+            }
+        }
+
+        // Llamar a la función de verificación al cargar la página
+        $(document).ready(function () {
+            checkLogin();
+        });
+    </script>
+</body>
+
+<<<<<<< HEAD
+
+
+
+
+
+
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+</html>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
