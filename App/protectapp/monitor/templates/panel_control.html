@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control del Dispositivo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #eef2f7;
+        }
+        /* Barra lateral izquierda */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #1b1e23;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .sidebar.collapsed {
+            width: 80px;
+            transition: all 0.3s ease;
+        }
+        .sidebar.collapsed a span {
+            display: none;
+        }
+        .sidebar.collapsed .logo img {
+            width: 50px;
+        }
+        .sidebar .logo img {
+            width: 150px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            font-size: 1.1em;
+        }
+        .sidebar a:hover {
+            transform: translateX(10px);
+            background-color: #495057;
+            color: #fff;
+        }
+        .sidebar a.active {
+            background-color: #6c757d;
+            color: #fff;
+        }
+        .sidebar a i {
+            margin-right: 15px;
+        }
+        .sidebar.collapsed a i {
+            margin-right: 0;
+        }
+        .sidebar hr {
+            border-top: 1px solid #6c757d;
+            margin: 20px 0;
+        }
+        /* Botón para colapsar */
+        #toggleSidebar {
+            position: absolute;
+            top: 10px;
+            right: -25px;
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            border: none;
+            transition: transform 0.3s;
+        }
+        #toggleSidebar.collapsed {
+            transform: rotate(180deg);
+        }
+        /* Estilos del contenido */
+        .main-content {
+            margin-left: 280px;
+            padding: 40px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            transition: margin-left 0.3s ease;
+        }
+        .main-content.collapsed {
+            margin-left: 100px;
+            transition: margin-left 0.3s ease;
+        }
+        .main-content h2 {
+            color: #343a40;
+            font-weight: bold;
+        }
+        .tab-content > .tab-pane {
+            display: none;
+        }
+        .tab-content > .tab-pane.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Mejoramos la visualización de las tarjetas en las secciones */
+        .info-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .info-card h3 {
+            color: #343a40;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .info-card p {
+            color: #6c757d;
+        }
+        .info-card button {
+            margin-top: 10px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .info-card button:hover {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo text-center">
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+        </div>
+        <button id="toggleSidebar" class="btn"><i class="fas fa-chevron-left"></i></button>
+        <a href="#registro" class="active"><i class="fas fa-clipboard-list"></i> <span>Registro</span></a>
+        <a href="#archivo" class="nav-link"><i class="fas fa-folder"></i> <span>Archivo de Teléfono</span></a>
+        <a href="#ubicacion" class="nav-link"><i class="fas fa-map-marker-alt"></i> <span>Ubicación</span></a>
+        <a href="#grabacion" class="nav-link"><i class="fas fa-microphone-alt"></i> <span>Grabación en Tiempo Real</span></a>
+        <a href="#capturas" class="nav-link"><i class="fas fa-camera"></i> <span>Capturas</span></a>
+        <a href="#exportar" class="nav-link"><i class="fas fa-file-export"></i> <span>Exportar Datos</span></a>
+        <a href="#verificacion" class="nav-link"><i class="fas fa-check-circle"></i> <span>Verificación de Permisos</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Panel de Control del Dispositivo</h2>
+        
+        <!-- Contenido de las Secciones (Tabs activadas dinámicamente) -->
+        <div id="content-sections">
+            <div id="registro" class="tab-pane active">
+                <div class="info-card">
+                    <h3>Registro</h3>
+                    <p>Historial general de la actividad del dispositivo, incluyendo eventos importantes.</p>
+                    <button>Ver más detalles</button>
+                </div>
+            </div>
+            <div id="archivo" class="tab-pane">
+                <div class="info-card">
+                    <h3>Archivo de Teléfono</h3>
+                    <p>Incluye registros de llamadas, mensajes, contactos, fotos y vídeos.</p>
+                    <button>Explorar archivos</button>
+                </div>
+            </div>
+            <div id="ubicacion" class="tab-pane">
+                <div class="info-card">
+                    <h3>Ubicación</h3>
+                    <p>Mapa en tiempo real y historial de ubicaciones.</p>
+                    <button>Ver mapa</button>
+                </div>
+            </div>
+            <div id="grabacion" class="tab-pane">
+                <div class="info-card">
+                    <h3>Grabación en Tiempo Real</h3>
+                    <p>Opciones para grabar llamadas y grabar pantalla.</p>
+                    <button>Iniciar grabación</button>
+                </div>
+            </div>
+            <div id="capturas" class="tab-pane">
+                <div class="info-card">
+                    <h3>Capturas</h3>
+                    <p>Captura de pantalla y toma de fotos en tiempo real.</p>
+                    <button>Tomar captura</button>
+                </div>
+            </div>
+            <div id="exportar" class="tab-pane">
+                <div class="info-card">
+                    <h3>Exportar Datos</h3>
+                    <p>Opciones para exportar todos los datos del dispositivo.</p>
+                    <button>Exportar datos</button>
+                </div>
+            </div>
+            <div id="verificacion" class="tab-pane">
+                <div class="info-card">
+                    <h3>Verificación de Permisos</h3>
+                    <p>Revisa y gestiona los permisos requeridos por el dispositivo.</p>
+                    <button>Revisar permisos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Toggle sidebar
+            $('#toggleSidebar').click(function() {
+                $('.sidebar').toggleClass('collapsed');
+                $('.main-content').toggleClass('collapsed');
+                $('#toggleSidebar').toggleClass('collapsed');
+            });
+            
+            // Tab switching
+            $('.sidebar a').click(function(e) {
+                e.preventDefault();
+                $('.sidebar a').removeClass('active');
+                $(this).addClass('active');
+                const target = $(this).attr('href');
+                $('.tab-pane').removeClass('active');
+                $(target).addClass('active');
+            });
+        });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470

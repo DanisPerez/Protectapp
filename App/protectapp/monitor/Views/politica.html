@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Política de Privacidad</title>
+    <meta name="description" content="Política de privacidad de Protect para garantizar la seguridad y privacidad de los usuarios.">
+    <meta name="author" content="Protect Team">
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 10%;
+        }
+        .navbar-brand img {
+            width: 150px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Privacy Section */
+        .privacy-section {
+            padding: 60px 10%;
+            background-color: #fff;
+        }
+
+        .privacy-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .privacy-section h4 {
+            color: #007bff;
+            margin-top: 30px;
+        }
+
+        .privacy-text {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: #007bff;
+            padding: 40px 10%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section .btn-primary {
+            background-color: #ffd700;
+            border: none;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: #ffbf00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'caracteristicas' %}">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'recursos' %}">Recursos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'terminos' %}">Términos de servicio</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="privacy-section container">
+        <div class="privacy-heading" data-aos="fade-up">
+            <h2>Política de Privacidad</h2>
+            <p>Su privacidad es de suma importancia para nosotros. En Protect, estamos comprometidos a proteger y respetar su información.</p>
+        </div>
+
+        <!-- Privacy Details -->
+        <section class="privacy-text" data-aos="fade-up" data-aos-delay="100">
+            <h4>1. Recolección de Información</h4>
+            <p>Recopilamos información de identificación personal que usted nos proporciona al registrarse, como nombre, dirección de correo electrónico, y detalles de pago. También recopilamos datos automáticamente, como el historial de uso de la aplicación y la ubicación del dispositivo para ofrecer un mejor servicio.</p>
+            
+            <h4>2. Uso de la Información</h4>
+            <p>La información recopilada es utilizada para personalizar su experiencia, mejorar nuestro servicio, procesar transacciones y enviarle notificaciones importantes. Nunca vendemos ni alquilamos su información a terceros.</p>
+            
+            <h4>3. Compartición de la Información</h4>
+            <p>No compartimos su información personal con terceros, excepto en los casos requeridos por ley o para proteger los derechos y seguridad de nuestra empresa y usuarios.</p>
+            
+            <h4>4. Seguridad de los Datos</h4>
+            <p>Mantenemos medidas de seguridad administrativas, técnicas y físicas para proteger su información contra el acceso no autorizado, uso indebido, alteración y divulgación.</p>
+
+            <h4>5. Derechos del Usuario</h4>
+            <p>Usted tiene el derecho de acceder, corregir o eliminar su información personal en cualquier momento. Puede contactarnos para solicitar cambios o la eliminación de sus datos de nuestros registros.</p>
+
+            <h4>6. Cambios en la Política</h4>
+            <p>Podemos actualizar nuestra política de privacidad ocasionalmente. Le notificaremos sobre cualquier cambio a través de nuestro sitio web o mediante correo electrónico.</p>
+
+            <h4>7. Contacto</h4>
+            <p>Si tiene alguna pregunta o inquietud sobre nuestra política de privacidad, puede contactarnos a través de <a href="mailto:contacto@protect.com">contacto@protect.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" data-aos="fade-up">
+        <h2>Proteja la privacidad de su familia con Protect</h2>
+        <p>Conozca más sobre cómo podemos ayudar a mantener a sus seres queridos seguros.</p>
+        <a href="{% url 'productos' %}" class="btn btn-primary mt-3">Ver Planes y Precios</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+    </script>
+</body>
+</html>

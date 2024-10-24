@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Recuperar Contraseña</title>
+    <meta name="description" content="Página de recuperación de contraseña de Protect. Restaura tu acceso de manera segura.">
+    <meta name="author" content="Protect Team">
+
+    
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        header {
+            padding: 10px 10%;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        header .navbar-brand img {
+            width: 180px;
+        }
+
+        .reset-password-section {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reset-form-container {
+            padding: 20px;
+            width: 100%;
+        }
+
+        .reset-form-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .reset-form-container form {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .reset-form-container label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        /* Mensaje de error o éxito */
+        .alert {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button img {
+            width: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .back-button img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect" class="img-fluid">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Reset Password Section -->
+    <section class="reset-password-section" data-aos="fade-up">
+        <!-- Reset Form Section -->
+        <div class="reset-form-container">
+            <h2>Recuperar Contraseña</h2>
+            <p class="text-center">Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+            <form id="reset-password-form">
+                <div class="form-group">
+                    <label for="email">Dirección de correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Enviar Enlace de Recuperación</button>
+                <div id="response-message" class="alert"></div> <!-- Mensaje de respuesta -->
+            </form>
+
+            <!-- Back Button -->
+            <div class="back-button">
+                <a href="{% url 'login' %}">
+                    <img src="{% static 'img/atras.JPG' %}" alt="Regresar" title="Regresar a la página de inicio de sesión">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos y condiciones</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+
+        const resetPasswordForm = document.getElementById('reset-password-form');
+        const responseMessage = document.getElementById('response-message');
+
+        // Manejador del evento de envío del formulario
+        resetPasswordForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Evitar el envío tradicional del formulario
+
+            // Limpiar mensajes anteriores
+            responseMessage.style.display = 'none';
+            responseMessage.classList.remove('alert-success', 'alert-danger');
+            responseMessage.textContent = '';
+
+            const email = document.getElementById('email').value;
+
+            try {
+                // Hacer la solicitud POST usando fetch
+                const response = await fetch('http://localhost:8000/api/reset-password/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+
+                if (response.ok) {
+                    responseMessage.classList.add('alert', 'alert-success');
+                    responseMessage.textContent = 'Enlace de recuperación enviado con éxito. Revisa tu bandeja de entrada.';
+                } else {
+                    const data = await response.json();
+                    responseMessage.classList.add('alert', 'alert-danger');
+                    responseMessage.textContent = data.error || 'Error al enviar el enlace de recuperación. Inténtalo de nuevo.';
+                }
+            } catch (error) {
+                responseMessage.classList.add('alert', 'alert-danger');
+                responseMessage.textContent = 'Ocurrió un error. Por favor, inténtalo de nuevo.';
+            }
+
+            responseMessage.style.display = 'block';
+        });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
