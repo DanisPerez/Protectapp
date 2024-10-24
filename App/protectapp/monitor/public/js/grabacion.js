@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Obtener el token y dispositivoId desde localStorage
 const token = localStorage.getItem('access_token');
 let dispositivoId = localStorage.getItem('dispositivoSeleccionado');
@@ -22,6 +23,8 @@ if (!token || !dispositivoId) {
 }
 
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 const token = localStorage.getItem('access_token');
 
 const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
@@ -55,7 +58,10 @@ if (!token) {
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 // Función para mostrar alertas
 function mostrarAlerta(id, mensaje, tipo = 'info') {
     const alerta = document.getElementById(id);
@@ -63,10 +69,13 @@ function mostrarAlerta(id, mensaje, tipo = 'info') {
     alerta.innerText = mensaje;
     alerta.style.display = 'block';
 <<<<<<< HEAD
+<<<<<<< HEAD
     setTimeout(() => {
         alerta.style.display = 'none';
     }, 3000);  // Ocultar la alerta después de 3 segundos
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     setTimeout(() => {
         alerta.style.display = 'none';
@@ -92,7 +101,10 @@ function mostrarAlerta(id, mensaje, tipo = 'info') {
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 }
 
 // Función para mostrar el spinner mientras se procesa
@@ -101,6 +113,7 @@ function mostrarSpinner(idSpinner, mostrar = true) {
     spinner.style.display = mostrar ? 'inline-block' : 'none';
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Habilitar y deshabilitar botones
 function cambiarEstadoBotones(iniciarBtn, detenerBtn, iniciar = true) {
@@ -120,6 +133,10 @@ async function manejarGrabacion(url, alertaId, spinnerId, iniciarBtn, detenerBtn
 // Función genérica para iniciar o detener grabación con fetch
 async function manejarGrabacion(url, alertaId, spinnerId, mensajeExito, mensajeError) {
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+// Función genérica para iniciar o detener grabación con fetch
+async function manejarGrabacion(url, alertaId, spinnerId, mensajeExito, mensajeError) {
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     try {
         mostrarSpinner(spinnerId, true);
         const response = await fetch(url, {
@@ -134,9 +151,12 @@ async function manejarGrabacion(url, alertaId, spinnerId, mensajeExito, mensajeE
         if (response.ok) {
             mostrarAlerta(alertaId, mensajeExito, 'success');
 <<<<<<< HEAD
+<<<<<<< HEAD
             cambiarEstadoBotones(iniciarBtn, detenerBtn, false);  // Deshabilitar botón de iniciar y habilitar el de detener
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         } else {
             mostrarAlerta(alertaId, mensajeError, 'danger');
         }
@@ -147,6 +167,7 @@ async function manejarGrabacion(url, alertaId, spinnerId, mensajeExito, mensajeE
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Eventos para grabación de llamadas
 document.getElementById('iniciarLlamada').addEventListener('click', function () {
@@ -168,6 +189,8 @@ document.getElementById('detenerLlamada').addEventListener('click', function () 
         console.error('dispositivoId no está definido.');
     }
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 // Eventos para grabación de llamadas
 document.getElementById('iniciarLlamada').addEventListener('click', function () {
@@ -216,11 +239,15 @@ document.getElementById('detenerLlamada').addEventListener('click', function () 
     manejarGrabacion('http://localhost:8000/api/dispositivos/1/detener-grabacion/', 'alertLlamada', 'spinnerLlamada',
  afc917d1d14c3730d6946130d053056968a08dc6
         'Grabación de llamada detenida.', 'Error al detener la grabación de llamada.');
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 });
 
 // Eventos para grabación de pantalla
 document.getElementById('iniciarPantalla').addEventListener('click', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (dispositivoId) {
         manejarGrabacion(`http://localhost:8000/api/dispositivos/${dispositivoId}/grabar-pantalla/`, 
@@ -289,6 +316,8 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('dispositivoId no está definido.');
     }
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     manejarGrabacion(`http://localhost:8000/api/dispositivos/${dispositivoId}/grabar-pantalla/`, 'alertPantalla', 'spinnerPantalla',
 
@@ -304,7 +333,10 @@ document.getElementById('detenerPantalla').addEventListener('click', function ()
     manejarGrabacion('http://localhost:8000/api/dispositivos/1/detener-grabacion-pantalla/', 'alertPantalla', 'spinnerPantalla',
  afc917d1d14c3730d6946130d053056968a08dc6
         'Grabación de pantalla detenida.', 'Error al detener la grabación de pantalla.');
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 });
 
 // Cerrar sesión
@@ -312,16 +344,22 @@ document.getElementById('cerrar-sesion').addEventListener('click', function () {
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
 <<<<<<< HEAD
+<<<<<<< HEAD
     localStorage.removeItem('dispositivoSeleccionado');
     window.location.href = '/login';  // Redirigir al login después de cerrar sesión
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     localStorage.removeItem('dispositivoSeleccionado');
     window.location.href = '/login';  // Redirigir al login después de cerrar sesión
 
     window.location.href = '/login'; // Redirigir al login después de cerrar sesión
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 });
 
 // Función para alternar el despliegue del menú del usuario
@@ -337,17 +375,25 @@ document.addEventListener('click', function (event) {
         dropdown.style.display = 'none';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 });
 
 // Redirigir a la página de registro de eventos
 document.getElementById('registro-link').addEventListener('click', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+    const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     if (dispositivoId) {
         window.location.href = `/dispositivo/${dispositivoId}/reg_event`;
     } else {
@@ -356,7 +402,10 @@ document.getElementById('registro-link').addEventListener('click', function () {
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 });
@@ -368,5 +417,9 @@ document.getElementById('registro-link').addEventListener('click', function () {
  a8d19f143da4dcdf7a22fd08e935b212cf57580a
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+<<<<<<< HEAD
  afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+ afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29

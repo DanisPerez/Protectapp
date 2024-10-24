@@ -1,19 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 import os
 from pathlib import Path
 from datetime import timedelta
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 """
 Django settings for protectapp project.
 
@@ -58,8 +74,15 @@ from datetime import timedelta
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,9 +100,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 >>>>>>> 052f2d3b4d3ee496a9b96224faedb68f377a196d
 >>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
@@ -90,8 +120,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-n^5(mbr=e%w5c4+6=7olm7qn284k(!#no3orri@v+^b737#y_e'
 
@@ -103,10 +140,18 @@ SECRET_KEY = 'django-insecure-n^5(mbr=e%w5c4+6=7olm7qn284k(!#no3orri@v+^b737#y_e
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 DEBUG = True  # Cambia esto a False en producción
@@ -127,8 +172,15 @@ ALLOWED_HOSTS = []  # Añade aquí tu dominio de producción, por ejemplo: ['tu-
 =======
 >>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -137,13 +189,21 @@ ALLOWED_HOSTS = []
 # Application definition
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Application definition
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 # Application definition
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 >>>>>>> 052f2d3b4d3ee496a9b96224faedb68f377a196d
 
 >>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
@@ -153,8 +213,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -163,21 +230,37 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     'monitor',  
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',  # CORS
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -196,8 +279,15 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',  # Agregado para CORS
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 ]
 
 MIDDLEWARE = [
@@ -207,11 +297,19 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # CORS
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     'corsheaders.middleware.CorsMiddleware',  # CORS
 =======
 <<<<<<< HEAD
     'corsheaders.middleware.CorsMiddleware',  # CORS
 =======
+=======
+<<<<<<< HEAD
+    'corsheaders.middleware.CorsMiddleware',  # CORS
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     'corsheaders.middleware.CorsMiddleware',  # Agregado para CORS
 <<<<<<< HEAD
 =======
@@ -243,8 +341,15 @@ MIDDLEWARE = [
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -253,9 +358,13 @@ MIDDLEWARE = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from django.contrib.messages import constants as message_constants
 MESSAGE_TAGS = {
     message_constants.DEBUG: 'debug',
@@ -274,8 +383,14 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'monitor/Views')],  # Ahora apunta al nuevo directorio Views
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 ROOT_URLCONF = 'protectapp.urls'
 
 <<<<<<< HEAD
@@ -320,8 +435,15 @@ TEMPLATES = [
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -335,10 +457,13 @@ TEMPLATES = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 WSGI_APPLICATION = 'protectapp.wsgi.application'
 
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 
 WSGI_APPLICATION = 'protectapp.wsgi.application'
@@ -348,7 +473,15 @@ WSGI_APPLICATION = 'protectapp.wsgi.application'
 
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+WSGI_APPLICATION = 'protectapp.wsgi.application'
+
+<<<<<<< HEAD
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Database configuration
 DATABASES = {
     'default': {
@@ -363,10 +496,18 @@ DATABASES = {
 
 # Password validation
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -421,8 +562,15 @@ DATABASES = {
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -440,6 +588,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 <<<<<<< HEAD
 # Static files configuration
+<<<<<<< HEAD
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
@@ -447,6 +596,9 @@ STATICFILES_DIRS = [
 =======
 <<<<<<< HEAD
 # Static files configuration
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 STATIC_URL = '/public/'
 
 STATICFILES_DIRS = [
@@ -458,7 +610,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'monitor/static'),
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'monitor/static'),
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -466,10 +626,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -564,19 +732,34 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # Django REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         'rest_framework.renderers.JSONRenderer',
     ),
     'DEFAULT_PARSER_CLASSES': (
@@ -610,10 +793,18 @@ USE_TZ = True
 # Default auto field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         'rest_framework.renderers.JSONRenderer',  # Renderizado en formato JSON
     ),
     'DEFAULT_PARSER_CLASSES': (
@@ -715,5 +906,12 @@ if not DEBUG:
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29

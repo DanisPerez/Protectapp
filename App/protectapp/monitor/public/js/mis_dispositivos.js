@@ -164,10 +164,13 @@ document.getElementById('add-device-form').addEventListener('submit', async func
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 // Sondeo para actualizar el estado de los dispositivos cada 10 segundos
 setInterval(obtenerDispositivos, 10000);
 

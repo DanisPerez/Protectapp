@@ -3,13 +3,21 @@
 from django.contrib import admin
 =======
 <<<<<<< HEAD
-
-from django.contrib import admin
-=======
 <<<<<<< HEAD
 
 from django.contrib import admin
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+<<<<<<< HEAD
+
+from django.contrib import admin
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 """
 URL configuration for protectapp project.
 
@@ -44,18 +52,33 @@ from django.contrib import admin
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 <<<<<<< HEAD
+<<<<<<< HEAD
     path('', include('monitor.urls')),
 =======
 <<<<<<< HEAD
     path('', include('monitor.urls')),
 =======
+=======
+<<<<<<< HEAD
+    path('', include('monitor.urls')),
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     path('', include('monitor.urls')),  # Incluir las rutas de la aplicación monitor
 <<<<<<< HEAD
 =======
@@ -81,6 +104,13 @@ urlpatterns = [
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 ]

@@ -1,34 +1,59 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Modelo Usuario 
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 # Modelo Usuario 
 =======
 # Modelo Usuario (Extendiendo el modelo por defecto de Django si es necesario)
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+# Modelo Usuario (Extendiendo el modelo por defecto de Django si es necesario)
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 class Usuario(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     contraseña = models.CharField(max_length=100)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from django.db import models
 <<<<<<< HEAD
 from django.contrib.auth.models import User
@@ -71,12 +96,20 @@ class Usuario(models.Model):
     email = models.EmailField(unique=True, max_length=80)
     contraseña = models.CharField(max_length=80)
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     def __str__(self):
         return self.nombre
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -89,9 +122,22 @@ class Dispositivo(models.Model):
 <<<<<<< HEAD
 =======
 =======
+# Modelo para Dispositivos
+class Dispositivo(models.Model):
+<<<<<<< HEAD
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE) 
+    nombre = models.CharField(max_length=80)
+    modelo = models.CharField(max_length=80)
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+=======
 <<<<<<< HEAD
 # Modelo para Dispositivos
 class Dispositivo(models.Model):
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
     modelo = models.CharField(max_length=100)
@@ -108,20 +154,35 @@ class Dispositivo(models.Model):
     nombre = models.CharField(max_length=80)
     modelo = models.CharField(max_length=80)
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     estado = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nombre
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Modelo para Llamadas
 class Llamadas(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
@@ -138,9 +199,13 @@ class Llamadas(models.Model):
 class Mensajes(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     numero = models.CharField(max_length=15)
     contenido = models.TextField()
     fecha = models.DateField()
@@ -150,8 +215,14 @@ class Mensajes(models.Model):
     def __str__(self):
         return f"Mensaje {self.tipo} del número {self.numero}"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     numero = models.CharField(max_length=20)
     contenido = models.TextField()
     fecha = models.DateField()
@@ -160,20 +231,35 @@ class Mensajes(models.Model):
 
     def __str__(self):
         return f"{self.numero} - {self.tipo}"
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # Modelo para Contactos
 class Contactos(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
 <<<<<<< HEAD
-    nombre = models.CharField(max_length=80)
-    numero = models.CharField(max_length=15)
-=======
 <<<<<<< HEAD
     nombre = models.CharField(max_length=80)
     numero = models.CharField(max_length=15)
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+<<<<<<< HEAD
+    nombre = models.CharField(max_length=80)
+    numero = models.CharField(max_length=15)
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     nombre = models.CharField(max_length=100)
     numero = models.CharField(max_length=20)
 =======
@@ -239,24 +325,43 @@ class Contactos(models.Model):
     nombre = models.CharField(max_length=80)
     numero = models.CharField(max_length=15)
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     def __str__(self):
         return self.nombre
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 # Modelo para Fotos
 class Fotos(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
+=======
+# Modelo para Fotos
+class Fotos(models.Model):
+    dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     ruta_foto = models.CharField(max_length=100)
 =======
 <<<<<<< HEAD
 # Modelo para Fotos
 class Fotos(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     ruta_foto = models.CharField(max_length=255)
     fecha = models.DateField()
     hora = models.TimeField(default=timezone.now)
@@ -308,7 +413,14 @@ class Fotos(models.Model):
 >>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     fecha = models.DateField()
     hora = models.TimeField()
 
@@ -316,15 +428,26 @@ class Fotos(models.Model):
         return f"Foto tomada en {self.fecha}"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Modelo para Videos
 class Videos(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
     ruta_video = models.CharField(max_length=100)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # Modelo Videos
 class Videos(models.Model):
@@ -356,8 +479,15 @@ class Videos(models.Model):
 >>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     fecha = models.DateField()
     hora = models.TimeField()
 
@@ -365,42 +495,75 @@ class Videos(models.Model):
         return f"Video grabado en {self.fecha}"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Modelo para Ubicaciones
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 # Modelo para Ubicaciones
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 =======
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 # Modelo Ubicaciones
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 class Ubicaciones(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
     latitud = models.FloatField()
     longitud = models.FloatField()
     fecha = models.DateField()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     hora = models.TimeField()
 
     def __str__(self):
         return f"Ubicación: {self.latitud}, {self.longitud} el {self.fecha}"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     hora = models.TimeField(default=timezone.now)
 
     def __str__(self):
         return f"Ubicación registrada el {self.fecha} a las {self.hora}"
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # Modelo para Grabaciones de Llamadas
 class GrabacionesLlamadas(models.Model):
@@ -410,13 +573,17 @@ class GrabacionesLlamadas(models.Model):
     fecha = models.DateField()
     hora = models.TimeField(default=timezone.now)
 <<<<<<< HEAD
+<<<<<<< HEAD
     archivo_audio = models.FileField(upload_to='llamadas/', default='llamadas/default.mp3')  # Definir un valor predeterminado
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     def __str__(self):
         return f"Grabación de llamada del {self.fecha}"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Modelo para Grabaciones de Pantalla
@@ -425,17 +592,23 @@ class GrabacionesPantalla(models.Model):
     archivo_video = models.FileField(upload_to='grabaciones/pantalla/')  # Campo para el archivo de video
     fecha = models.DateField(auto_now_add=True)
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Modelo para Grabaciones de Pantalla
 class GrabacionesPantalla(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
     ruta_grabacion = models.CharField(max_length=255)
     fecha = models.DateField()
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     hora = models.TimeField(default=timezone.now)
 
     def __str__(self):
         return f"Grabación de pantalla del {self.fecha}"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Modelo para Capturas de Pantalla
@@ -503,6 +676,17 @@ class CapturasPantalla(models.Model):
 <<<<<<< HEAD
     ruta_captura = models.CharField(max_length=100)
 =======
+=======
+# Modelo para Capturas de Pantalla
+class CapturasPantalla(models.Model):
+    dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ruta_captura = models.CharField(max_length=100)
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     ruta_captura = models.CharField(max_length=255)
     fecha = models.DateField()
     hora = models.TimeField(default=timezone.now)
@@ -626,7 +810,14 @@ class CapturasPantalla(models.Model):
 >>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     fecha = models.DateField()
     hora = models.TimeField()
 
@@ -634,12 +825,23 @@ class CapturasPantalla(models.Model):
         return f"Captura de pantalla en {self.fecha}"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Modelo para Verificación de Permisos
 =======
 <<<<<<< HEAD
 
 # Modelo Verificación de Permisos
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
+=======
+=======
+
+# Modelo Verificación de Permisos
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 class VerificacionPermisos(models.Model):
     permiso = models.CharField(max_length=100)
     estado = models.BooleanField()  # 1 = concedido, 0 = denegado
@@ -653,7 +855,14 @@ class VerificacionPermisos(models.Model):
         return self.permiso
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # Modelo HistorialEvento (Nuevo modelo que agregamos)
 
@@ -681,8 +890,15 @@ class VerificacionPermisos(models.Model):
 <<<<<<< HEAD
         return f"Permiso {self.permiso} - {self.estado}"
 
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Modelo para Evento
 class Evento(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
@@ -699,9 +915,13 @@ class HistorialEvento(models.Model):
     dispositivo = models.ForeignKey(Dispositivo, on_delete=models.CASCADE)
     tipo_evento = models.CharField(max_length=100)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     fecha = models.DateField(default=timezone.now)
     hora = models.TimeField(default=timezone.now)
     detalles = models.TextField(blank=True, null=True)
@@ -711,8 +931,14 @@ class HistorialEvento(models.Model):
         return f"{self.tipo_evento} - {self.dispositivo.nombre}"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     fecha = models.DateField()
     hora = models.TimeField(default=timezone.now)
     detalles = models.TextField(default='')
@@ -724,5 +950,12 @@ class HistorialEvento(models.Model):
         return f"Permiso {self.permiso} verificado el {self.fecha_verificacion}"
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29

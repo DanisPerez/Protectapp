@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 from django.contrib import admin
 from .models import Usuario, Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento
@@ -12,10 +20,18 @@ from .models import Usuario, Dispositivo, Llamadas, Mensajes, Contactos, Fotos, 
 # Registrar todos los modelos para que sean visibles en el panel de administración
 admin.site.register(Usuario)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from django.contrib import admin
 <<<<<<< HEAD
 from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento
@@ -58,8 +74,15 @@ admin.site.register(Usuario)
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 admin.site.register(Dispositivo)
 admin.site.register(Llamadas)
 admin.site.register(Mensajes)
@@ -77,10 +100,14 @@ admin.site.register(VerificacionPermisos)
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 # Registro de Historial de Eventos con personalización del administrador
 =======
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Registro de Historial de Eventos con personalización del administrador
 =======
 <<<<<<< HEAD
@@ -89,7 +116,15 @@ admin.site.register(VerificacionPermisos)
 
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+
+
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 @admin.register(HistorialEvento)
 class HistorialEventoAdmin(admin.ModelAdmin):
     list_display = ('dispositivo', 'tipo_evento', 'fecha', 'hora', 'detalles')
@@ -104,11 +139,22 @@ class HistorialEventoAdmin(admin.ModelAdmin):
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+=======
+=======
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29

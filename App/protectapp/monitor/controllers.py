@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import csv
 import logging 
 import pandas as pd
@@ -23,6 +24,8 @@ from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, U
 from .serializers import DispositivoSerializer, UserSerializer, UserRegisterSerializer, LlamadasSerializer, MensajesSerializer, ContactosSerializer, FotosSerializer, VideosSerializer, UbicacionesSerializer, GrabacionesLlamadasSerializer, GrabacionesPantallaSerializer, CapturasPantallaSerializer, VerificacionPermisosSerializer, HistorialEventoSerializer
 
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 import logging 
 import json
@@ -41,7 +44,10 @@ from rest_framework.permissions import AllowAny
 
 from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, Contactos, VerificacionPermisos, HistorialEvento
 from .serializers import DispositivoSerializer, UserSerializer, UserRegisterSerializer, LlamadasSerializer, MensajesSerializer, ContactosSerializer, FotosSerializer, VideosSerializer, UbicacionesSerializer, GrabacionesLlamadasSerializer, GrabacionesPantallaSerializer, CapturasPantallaSerializer,VerificacionPermisosSerializer, HistorialEventoSerializer
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 # API Overview
 @api_view(['GET'])
@@ -64,7 +70,10 @@ def api_overview(request):
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -73,7 +82,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 import logging
 
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Configuración básica del logger
 logger = logging.getLogger(__name__)
 
@@ -173,6 +185,7 @@ def get_user_data(request):
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -182,6 +195,8 @@ def get_user_data(request):
 
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # Gestionar detalles y actualización de dispositivos
 @api_view(['GET', 'PUT'])
 @permission_classes([IsAuthenticated])
@@ -224,6 +239,7 @@ def dispositivo_list_create(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
 
@@ -247,6 +263,8 @@ def eliminar_dispositivo(request, dispositivo_id):
 
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 def reg_event(request, id):
@@ -279,6 +297,7 @@ def obtener_evento_detalle(request, id):
         return Response({"error": "Evento no encontrado"}, status=404)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Recibir evento
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -295,6 +314,10 @@ def registrar_evento(request, dispositivo_id):
 
 # Get llamadas, mensajes, contactos, fotos y videos por dispositivo_id
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+
+# Get llamadas, mensajes, contactos, fotos y videos por dispositivo_id
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_llamadas(request, dispositivo_id):
@@ -302,6 +325,7 @@ def get_llamadas(request, dispositivo_id):
     serializer = LlamadasSerializer(llamadas, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Recibir llamadas
 @api_view(['POST'])
@@ -316,6 +340,8 @@ def recibir_llamadas(request, dispositivo_id):
 # mostrar mensajes
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_mensajes(request, dispositivo_id):
@@ -323,6 +349,7 @@ def get_mensajes(request, dispositivo_id):
     serializer = MensajesSerializer(mensajes, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Recibir mensajes
 @api_view(['POST'])
@@ -337,6 +364,8 @@ def recibir_mensajes(request, dispositivo_id):
 # mostrar contactos
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_contactos(request, dispositivo_id):
@@ -344,6 +373,7 @@ def get_contactos(request, dispositivo_id):
     serializer = ContactosSerializer(contactos, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Recibir contactos
 @api_view(['POST'])
@@ -358,6 +388,8 @@ def recibir_contactos(request, dispositivo_id):
 # Mostrar fotos
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_fotos(request, dispositivo_id):
@@ -365,6 +397,7 @@ def get_fotos(request, dispositivo_id):
     serializer = FotosSerializer(fotos, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #Recibir fotos
 @api_view(['POST'])
@@ -385,6 +418,8 @@ def recibir_fotos(request, dispositivo_id):
 # mostrar videos
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_videos(request, dispositivo_id):
@@ -392,6 +427,7 @@ def get_videos(request, dispositivo_id):
     serializer = VideosSerializer(videos, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Recibir videos
 @api_view(['POST'])
@@ -875,6 +911,19 @@ def solicitar_permiso(request, dispositivo_id, permiso_id):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 =======
+=======
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -907,6 +956,7 @@ def solicitar_permiso(request, dispositivo_id, permiso_id):
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -919,6 +969,8 @@ def solicitar_permiso(request, dispositivo_id, permiso_id):
 
 
 
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 # CRUD for Dispositivo
 @api_view(['GET'])
 def dispositivo_list(request):

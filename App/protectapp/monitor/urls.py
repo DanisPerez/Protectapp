@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 from django.conf import settings
 from django.urls import path
@@ -22,11 +23,20 @@ from . import controllers
 =======
 <<<<<<< HEAD
 from django.urls import path
+=======
+from django.urls import path
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from .controllers import login_user, register_user, update_user_profile, logout_user, dispositivo_list_create, get_user_data, dispositivo_detail, reg_event, obtener_eventos, obtener_evento_detalle, dispositivo_update, dispositivo_detail_update, get_llamadas, get_mensajes, get_contactos, get_fotos, get_videos
 from . import controllers
 =======
 <<<<<<< HEAD
 from django.urls import path
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from . import views
 
 urlpatterns = [
@@ -142,17 +152,28 @@ from django.conf import settings
 from django.conf.urls.static import static
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 from . import views
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
     TokenVerifyView,
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -174,6 +195,7 @@ urlpatterns = [
     path('api/logout/', logout_user, name='logout'),
     path('api/user/', get_user_data, name='get_user_data'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     # Ruta para obtener los datos del usuario autenticado 
     path('usuarios/', get_user_data, name='get_user_data'),
@@ -259,6 +281,8 @@ urlpatterns = [
     path('api/dispositivos/<int:dispositivo_id>/verificacion-permisos/', obtener_permisos, name='obtener_permisos'),
     path('api/dispositivos/<int:dispositivo_id>/solicitar-permiso/<int:permiso_id>/', solicitar_permiso, name='solicitar_permiso'),
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     # Ruta para obtener los datos del usuario autenticado (desde controllers)
     path('usuarios/', get_user_data, name='get_user_data'),
     path('api/usuarios/', get_user_data, name='get_user_data'),
@@ -321,7 +345,10 @@ urlpatterns = [
 
 
 
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
     # Dispositivo CRUD
@@ -438,6 +465,7 @@ urlpatterns += [
     path('verificacion_permisos/', controllers.verificacion_permisos_view, name='verificacion_permisos'),
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 if settings.DEBUG:
@@ -446,6 +474,13 @@ if settings.DEBUG:
 =======
 <<<<<<< HEAD
 =======
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -655,5 +690,12 @@ if settings.DEBUG:
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+<<<<<<< HEAD
+>>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29

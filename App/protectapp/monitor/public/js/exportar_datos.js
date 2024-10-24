@@ -7,7 +7,10 @@ function verificarSesion() {
         alert('Tu sesión ha expirado o no has seleccionado un dispositivo.');
         window.location.href = '/login';  // Redirigir si no hay token o dispositivo
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -26,7 +29,10 @@ function verificarSesion() {
         alert('Tu sesión ha expirado o no has iniciado sesión.');
         window.location.href = '/login'; // Redirigir a la página de inicio de sesión si no hay token
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     }
 }
 
@@ -34,7 +40,10 @@ function verificarSesion() {
 verificarSesion();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -43,7 +52,10 @@ verificarSesion();
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
 
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 // Manejar clic en el botón de exportación
 document.getElementById('exportarBtn').addEventListener('click', async function () {
     const formato = document.getElementById('formatoExportacion').value;
@@ -53,14 +65,20 @@ document.getElementById('exportarBtn').addEventListener('click', async function 
 
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const response = await fetch( `/api/dispositivos/${dispositivoId}/exportar/${formato}/?tipo=${tipoDatos}`, {
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
         const response = await fetch( `/api/dispositivos/${dispositivoId}/exportar/${formato}/?tipo=${tipoDatos}`, {
 
         const response = await fetch(`/api/dispositivos/1/exportar/?formato=${formato}&tipo=${tipoDatos}`, {
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + token,
@@ -103,7 +121,10 @@ function iniciarProgreso() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -114,17 +135,23 @@ function iniciarProgreso() {
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
 
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 // Cerrar sesión
 document.getElementById('cerrar-sesion').addEventListener('click', function () {
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
     alert('Has cerrado sesión.');
 <<<<<<< HEAD
+<<<<<<< HEAD
     window.location.href = '/login';  // Redirigir al login después de cerrar sesión
 });
 
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
     window.location.href = '/login';  // Redirigir al login después de cerrar sesión
 
@@ -145,7 +172,10 @@ document.addEventListener('click', function (event) {
         dropdown.style.display = 'none';
     }
 });
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 // Redirigir a la página de registro de eventos
@@ -161,10 +191,17 @@ document.getElementById('registro-link').addEventListener('click', function () {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
  a8d19f143da4dcdf7a22fd08e935b212cf57580a
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+<<<<<<< HEAD
  afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+ afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29

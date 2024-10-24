@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 const token = localStorage.getItem('access_token');
 const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
 const spinner = document.getElementById('spinner');
@@ -93,6 +97,7 @@ async function solicitarPermiso(permisoId) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Redirigir a la página de registro de eventos
 document.getElementById('registro-link').addEventListener('click', function () {
     const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
@@ -107,6 +112,8 @@ document.getElementById('registro-link').addEventListener('click', function () {
 
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 // Sondeo para actualizar el estado de los permisos cada 10 segundos
 setInterval(obtenerPermisos, 10000);
 

@@ -143,10 +143,14 @@
     <div class="sidebar">
         <div class="logo">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
 =======
             <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         </div>
         <a href="{% url 'inicio' %}"><i class="fas fa-home"></i> Inicio</a>
         <a href="{% url 'mi_producto' %}"><i class="fas fa-box"></i> Mi Producto</a>
@@ -169,11 +173,15 @@
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h3 class="d-inline-block">Mis Dispositivos</h3>
         <button class="btn btn-danger btn-sm ml-3" id="btn-delete-device">Delete</button>
 =======
         <h3>Mis Dispositivos</h3>
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+        <h3>Mis Dispositivos</h3>
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
         <!-- Section for Devices in Bootstrap Grid -->
         <div class="dispositivos-section mt-4">
@@ -208,6 +216,7 @@
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- Modal para eliminar un dispositivo -->
     <div class="modal fade" id="deleteDeviceModal" tabindex="-1" role="dialog" aria-labelledby="deleteDeviceModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -237,6 +246,8 @@
 
 =======
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
@@ -265,9 +276,13 @@
         // Función para cerrar sesión
         function logout() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             // Eliminar los tokens del almacenamiento local
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+            // Eliminar los tokens del almacenamiento local
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
             localStorage.removeItem('access_token');
             localStorage.removeItem('refresh_token');
             alert("Has cerrado sesión.");
@@ -283,6 +298,7 @@
             }
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Función para cargar los dispositivos del usuario autenticado
         function cargarDispositivos() {
@@ -377,6 +393,11 @@
         $(document).ready(function () {
             checkLogin();
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+        // Llamar a la función de verificación al cargar la página
+        $(document).ready(function () {
+            checkLogin();
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         });
     </script>
 </body>

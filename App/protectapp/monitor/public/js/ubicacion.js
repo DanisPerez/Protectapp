@@ -7,7 +7,10 @@ if (!dispositivoId) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 const token = localStorage.getItem('access_token');
@@ -23,7 +26,10 @@ const token = localStorage.getItem('access_token');
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 let map;
 let marker;
 
@@ -32,7 +38,10 @@ function initMap() {
     const loadingMessage = document.getElementById('loading-map');
     map = new google.maps.Map(document.getElementById('map'), {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -55,7 +64,10 @@ function initMap() {
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         center: { lat: 0, lng: 0 },  // Valor predeterminado
         zoom: 15
     });
@@ -67,7 +79,10 @@ function initMap() {
     google.maps.event.addListenerOnce(map, 'idle', function () {
         loadingMessage.style.display = 'none';  // Ocultar mensaje de carga
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
 
 
@@ -78,7 +93,10 @@ function initMap() {
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
     });
 }
 
@@ -86,14 +104,20 @@ function initMap() {
 async function obtenerUbicacionActual() {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const response = await fetch(`/api/dispositivos/${dispositivoId}/ubicaciones/`, {
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
         const response = await fetch(`/api/dispositivos/${dispositivoId}/ubicaciones/`, {
 
         const response = await fetch('/api/dispositivos/1/ubicaciones/', {
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
             method: 'GET',
             headers: { 'Authorization': 'Bearer ' + token }
         });
@@ -102,8 +126,11 @@ async function obtenerUbicacionActual() {
             const data = await response.json();
             if (data.length > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 const ubicacionActual = data[data.length - 1];  // Última ubicación
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
                 const ubicacionActual = data[data.length - 1];  // Última ubicación
 
@@ -121,7 +148,10 @@ async function obtenerUbicacionActual() {
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
                 const latLng = { lat: parseFloat(ubicacionActual.latitud), lng: parseFloat(ubicacionActual.longitud) };
                 map.setCenter(latLng);
                 marker.setPosition(latLng);
@@ -139,14 +169,20 @@ async function obtenerHistorialUbicaciones() {
     const loadingMessage = document.getElementById('loading-historial');
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const response = await fetch(`/api/dispositivos/${dispositivoId}/ubicaciones/`, {
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
         const response = await fetch(`/api/dispositivos/${dispositivoId}/ubicaciones/`, {
 
         const response = await fetch('/api/dispositivos/1/ubicaciones/', {
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
             method: 'GET',
             headers: { 'Authorization': 'Bearer ' + token }
         });
@@ -167,8 +203,11 @@ async function obtenerHistorialUbicaciones() {
                 `;
             });
 <<<<<<< HEAD
+<<<<<<< HEAD
             loadingMessage.style.display = 'none';  // Ocultar mensaje de carga
 =======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 
             loadingMessage.style.display = 'none';  // Ocultar mensaje de carga
 
@@ -186,7 +225,10 @@ async function obtenerHistorialUbicaciones() {
  b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
  b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
  afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
         } else {
             throw new Error("Error al obtener el historial de ubicaciones");
         }
@@ -203,9 +245,13 @@ setInterval(() => {
 }, 10000);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
 // Redirigir a la página de registro de eventos
 document.getElementById('registro-link').addEventListener('click', function () {
     const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
@@ -217,7 +263,12 @@ document.getElementById('registro-link').addEventListener('click', function () {
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
  afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+
+ afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
