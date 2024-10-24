@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 
 from django.apps import AppConfig
 
@@ -12,7 +15,10 @@ class MonitorConfig(AppConfig):
     def ready(self):
         import monitor.signals  # Importar señales
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 =======
 from django.apps import AppConfig
 
@@ -30,4 +36,7 @@ class TuAppConfig(AppConfig):
 =======
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619

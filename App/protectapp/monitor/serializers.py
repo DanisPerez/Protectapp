@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 from rest_framework import serializers
+<<<<<<< HEAD
 from django.contrib.auth.models import User
 from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento
 
@@ -13,6 +14,8 @@ class UserSerializer(serializers.ModelSerializer):
 <<<<<<< HEAD
 
 from rest_framework import serializers
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento
 
 class DispositivoSerializer(serializers.ModelSerializer):
@@ -79,14 +82,20 @@ from .models import (
 
 class UserSerializer(serializers.ModelSerializer):
     is_active = serializers.BooleanField(read_only=True)
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
     class Meta:
         model = User
         fields = ['username', 'email', 'first_name', 'last_name', 'date_joined', 'is_active']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Serializador para registrar nuevos usuarios
 =======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 
 
 # Serializador para registrar nuevos usuarios
@@ -111,7 +120,10 @@ class UserSerializer(serializers.ModelSerializer):
 >>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
 >>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 class UserRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -128,10 +140,14 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         )
         return user
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 # Serializador para el modelo Dispositivo
 class DispositivoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -148,9 +164,12 @@ class DispositivoSerializer(serializers.ModelSerializer):
         return dispositivo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 
 # Serializer para las Llamadas
 class LlamadasSerializer(serializers.ModelSerializer):
@@ -182,9 +201,12 @@ class VideosSerializer(serializers.ModelSerializer):
         model = Videos
         fields = ['ruta_video', 'fecha', 'hora']
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Serializador para Ubicaciones
 =======
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 =======
 # Serializador para Llamadas
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
@@ -231,13 +253,17 @@ class VideosSerializer(serializers.ModelSerializer):
 
 # Serializador para Ubicaciones
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 class UbicacionesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ubicaciones
         fields = ['id', 'dispositivo', 'latitud', 'longitud', 'fecha', 'hora']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Serializador para Grabaciones de Llamadas
 =======
 <<<<<<< HEAD
@@ -245,12 +271,18 @@ class UbicacionesSerializer(serializers.ModelSerializer):
 # Serializador para Grabaciones de Llamadas
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+=======
+# Serializador para Grabaciones de Llamadas
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 class GrabacionesLlamadasSerializer(serializers.ModelSerializer):
     class Meta:
         model = GrabacionesLlamadas
         fields = ['id', 'dispositivo', 'ruta_grabacion', 'duracion', 'fecha', 'hora']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Serializador para Grabaciones de Pantalla
 =======
 <<<<<<< HEAD
@@ -258,12 +290,18 @@ class GrabacionesLlamadasSerializer(serializers.ModelSerializer):
 # Serializador para Grabaciones de Pantalla
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+=======
+# Serializador para Grabaciones de Pantalla
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 class GrabacionesPantallaSerializer(serializers.ModelSerializer):
     class Meta:
         model = GrabacionesPantalla
         fields = ['id', 'dispositivo', 'ruta_grabacion', 'fecha', 'hora']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Serializador para Capturas de Pantalla
 =======
 <<<<<<< HEAD
@@ -271,20 +309,31 @@ class GrabacionesPantallaSerializer(serializers.ModelSerializer):
 # Serializador para Capturas de Pantalla
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+=======
+# Serializador para Capturas de Pantalla
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 class CapturasPantallaSerializer(serializers.ModelSerializer):
     class Meta:
         model = CapturasPantalla
         fields = ['id', 'dispositivo', 'ruta_captura', 'fecha', 'hora']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 class VerificacionPermisosSerializer(serializers.ModelSerializer):
     class Meta:
         model = VerificacionPermisos
         fields = ['id', 'permiso', 'estado', 'fecha_verificacion']
 =======
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 # Serializador para Contactos
 class ContactosSerializer(serializers.ModelSerializer):
     class Meta:
@@ -298,6 +347,7 @@ class VerificacionPermisosSerializer(serializers.ModelSerializer):
 <<<<<<< HEAD
         fields = ['id', 'permiso', 'estado', 'fecha_verificacion', 'tipo_permiso', 'critico', 'clave_sistema']
 
+<<<<<<< HEAD
 # Serializador para Historial de Eventos
 class HistorialEventoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -307,6 +357,8 @@ class HistorialEventoSerializer(serializers.ModelSerializer):
 <<<<<<< HEAD
         fields = ['id', 'permiso', 'estado', 'fecha_verificacion', 'tipo_permiso', 'critico', 'clave_sistema']
 
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
 
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
 
@@ -321,4 +373,7 @@ class HistorialEventoSerializer(serializers.ModelSerializer):
         fields = ['id', 'dispositivo', 'permiso', 'estado', 'fecha_verificacion']
 >>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
 >>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<<<<<<< HEAD
 >>>>>>> 7c9c8fce799681b798ac83cabdaf1af962be551a
+=======
+>>>>>>> 8e18bd6d3b44f892c4e048fb7e4e553c2d8fe619
