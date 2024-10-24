@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Inscribirse</title>
+    <meta name="description" content="Página de registro de Protect. Crea una nueva cuenta para empezar a monitorear de manera segura.">
+    <meta name="author" content="Protect Team">
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Google Sign-In API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        /* Header */
+        header {
+            padding: 10px 10%;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        header .navbar-brand img {
+            width: 180px;
+        }
+
+        /* Register Section */
+        .register-section {
+            width: 100%;
+            max-width: 800px;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .register-section .register-image {
+            max-width: 300px;
+            flex: 1;
+        }
+
+        .register-form-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .register-form-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .register-form-container form {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-form-container label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        /* Google and Apple Sign Up Buttons */
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .btn-google {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #db4437;
+            color: #fff;
+            border: none;
+            margin: 0 5px;
+            height: 40px;
+        }
+
+        .btn-google:hover {
+            background-color: #c1351b;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        /* Back Button */
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button img {
+            width: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .back-button img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect" class="img-fluid">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Register Section -->
+    <section class="register-section" data-aos="fade-up">
+        <!-- Image Section -->
+        <div class="register-image">
+            <img src="{% static 'img/Login.png' %}" alt="Register Image" class="img-fluid rounded">
+        </div>
+
+        <!-- Register Form Section -->
+        <div class="register-form-container">
+            <h2>Regístrese en Protect</h2>
+            <p class="text-center">¿Ya tiene una cuenta? <a href="{% url 'login' %}">Inicie sesión</a></p>
+
+            <!-- Social Buttons -->
+            <div class="social-buttons">
+                <button type="button" id="googleSignInBtn" class="btn-google"><i class="fab fa-google"></i> Registrarse con Google</button>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider">o</div>
+
+            <!-- Registro de formulario -->
+            <form id="register-form" method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Dirección de correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su nombre de usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Crear cuenta</button>
+                <div id="error-message" class="alert alert-danger mt-3" style="display: none;"></div> <!-- Mensaje de error -->
+            </form>
+
+            <div class="text-center mt-3">
+                <p>Al crear una cuenta, confirmo que he leído y aceptado los <a href="{% url 'terminos' %}">Términos de Uso</a> y la <a href="{% url 'politica' %}">Política de Privacidad</a>.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-button">
+                <a href="{% url 'login' %}">
+                    <img src="{% static 'img/atras.JPG' %}" alt="Regresar" title="Regresar a la página de inicio de sesión">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos y condiciones</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+
+        // Configuración de Google Sign-In
+        function handleCredentialResponse(response) {
+            console.log("Credenciales de ID: " + response.credential);
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: "TU_CLIENT_ID_AQUI",
+                callback: handleCredentialResponse,
+                auto_select: false
+            });
+
+            document.getElementById("googleSignInBtn").addEventListener("click", function () {
+                google.accounts.id.prompt();
+            });
+        };
+
+        // Validar nombre de usuario
+        function validarNombreUsuario(username) {
+            const regex = /^[a-zA-Z0-9@.+-_]+$/;
+            return regex.test(username);
+        }
+
+        // Validar seguridad de contraseña
+        function validarContrasena(password) {
+            return password.length >= 8; // Mínimo 8 caracteres
+        }
+
+        // Manejo del registro del formulario con fetch
+        const registerForm = document.getElementById('register-form');
+        const errorMessage = document.getElementById('error-message');
+
+        registerForm.addEventListener('submit', async function (event) {
+            event.preventDefault(); // Evitar el envío tradicional del formulario
+
+            // Limpiar mensajes anteriores
+            errorMessage.style.display = 'none';
+            errorMessage.textContent = '';
+
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Validaciones de frontend
+            if (!validarNombreUsuario(username)) {
+                errorMessage.textContent = 'El nombre de usuario contiene caracteres no válidos.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            if (!validarContrasena(password)) {
+                errorMessage.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            try {
+                // Hacer la solicitud POST a la API de registro usando fetch
+                const response = await fetch('http://localhost:8000/api/register/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        username: username,
+                        password: password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Registro exitoso');
+                    window.location.href = '{% url "login" %}'; // Redirigir al inicio de sesión
+                } else {
+                    errorMessage.textContent = data.error || 'Error en el registro. Intente de nuevo.';
+                    errorMessage.style.display = 'block';
+                }
+            } catch (error) {
+                errorMessage.textContent = 'Ocurrió un error. Intente de nuevo.';
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

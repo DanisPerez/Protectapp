@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect - Inicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #eef2f7;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #343a40;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+        .sidebar .logo img {
+            width: 120px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sidebar a.active, .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+        .sidebar i {
+            margin-right: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .main-content h2 {
+            color: #343a40;
+            font-weight: bold;
+        }
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #495057;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .user-dropdown a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .user-dropdown a:hover {
+            background-color: #6c757d;
+        }
+
+        /* Summary sections */
+        .summary-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .summary-card {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .summary-card:last-child {
+            margin-right: 0;
+        }
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .summary-card h4 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .summary-card p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Device activity table */
+        .table-responsive {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #343a40;
+            color: #adb5bd;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                text-align: center;
+                padding: 10px;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+            .summary-section {
+                flex-direction: column;
+            }
+            .summary-card {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+<<<<<<< HEAD
+            <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
+=======
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+        </div>
+        <a href="{% url 'inicio' %}" class="active"><i class="fas fa-home"></i> Inicio</a>
+        <a href="{% url 'mi_producto' %}"><i class="fas fa-box"></i> Mi Producto</a>
+        <a href="{% url 'cuenta' %}"><i class="fas fa-user"></i> Mi Cuenta</a>
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Bienvenido de nuevo</h2>
+            <div class="user-info">
+                <img src="{% static 'img/cuenta.png' %}" alt="User Icon" id="user-icon">
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="{% url 'cuenta' %}">Mi Cuenta</a>
+                    <a href="{% url 'login' %}" onclick="logout()">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary-section">
+            <div class="summary-card">
+                <h4>Dispositivos Activos</h4>
+                <p><i class="fas fa-mobile-alt"></i> 3 Dispositivos</p>
+            </div>
+            <div class="summary-card">
+                <h4>Alertas Recientes</h4>
+                <p><i class="fas fa-exclamation-circle"></i> 2 Alertas</p>
+            </div>
+            <div class="summary-card">
+                <h4>Última Actividad</h4>
+                <p><i class="fas fa-clock"></i> Hace 2 horas</p>
+            </div>
+        </div>
+
+        <!-- Device Activity Table -->
+        <div class="table-responsive">
+            <h4>Actividad Reciente de los Dispositivos</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>Última Actividad</th>
+                        <th>Ubicación</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="device-activity-table">
+                    <!-- Los dispositivos serán cargados dinámicamente con fetch -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            cargarActividadDispositivos();
+        });
+
+        async function cargarActividadDispositivos() {
+            const token = localStorage.getItem('access_token');
+            
+            if (!token) {
+                alert('No has iniciado sesión. Redirigiendo a la página de inicio de sesión.');
+                window.location.href = "{% url 'login' %}";
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/dispositivos/', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    }
+                });
+
+                if (response.ok) {
+                    const dispositivos = await response.json();
+                    actualizarTablaDispositivos(dispositivos);
+                } else if (response.status === 401) {
+                    alert('Tu sesión ha expirado o no es válida. Por favor, inicia sesión de nuevo.');
+                    window.location.href = "{% url 'login' %}";
+                } else {
+                    alert('Error al obtener los datos de los dispositivos.');
+                }
+            } catch (error) {
+                console.error('Error en la solicitud de dispositivos:', error);
+                alert('Error en la solicitud. Inténtalo de nuevo.');
+            }
+        }
+
+        function actualizarTablaDispositivos(dispositivos) {
+            const tabla = document.getElementById('device-activity-table');
+            tabla.innerHTML = ''; // Limpiar la tabla antes de agregar nuevos datos
+
+            dispositivos.forEach(dispositivo => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${dispositivo.nombre}</td>
+                    <td>${dispositivo.ultima_actividad}</td>
+                    <td>${dispositivo.ubicacion}</td>
+                    <td><span class="badge ${getBadgeClass(dispositivo.estado)}">${dispositivo.estado}</span></td>
+                `;
+                tabla.appendChild(row);
+            });
+        }
+
+        function getBadgeClass(estado) {
+            if (estado === 'Activo') {
+                return 'badge-success';
+            } else if (estado === 'En Espera') {
+                return 'badge-warning';
+            } else {
+                return 'badge-danger';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('access_token');  // Elimina el token JWT al cerrar sesión
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}";  // Redirige a la página de inicio de sesión
+        }
+
+        $(document).ready(function(){
+            $('#user-icon').on('click', function() {
+                $('#user-dropdown').toggle();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.user-info').length) {
+                    $('#user-dropdown').hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

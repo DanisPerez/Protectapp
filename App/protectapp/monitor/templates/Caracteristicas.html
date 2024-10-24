@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Características</title>
+    <meta name="description" content="Características y ventajas de la aplicación Protect para monitoreo parental">
+    <meta name="author" content="Protect Team">
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 10%;
+        }
+        .navbar-brand img {
+            width: 150px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 60px 10%;
+            background-color: #fff;
+        }
+
+        .feature-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .feature-card .icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        /* Advantage Section */
+        .advantage-section {
+            padding: 60px 10%;
+            background: #e3f2fd;
+        }
+
+        .advantage {
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .advantage:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .cta-section {
+            background-color: #007bff;
+            padding: 40px 10%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section .btn-primary {
+            background-color: #ffd700;
+            border: none;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: #ffbf00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'caracteristicas' %}">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'recursos' %}">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'soporte' %}">Soporte</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <section class="features-section text-center" data-aos="fade-up">
+            <h2>Características Principales</h2>
+            <p>Descubre las poderosas funcionalidades que hacen de Protect la mejor herramienta de control parental.</p>
+        </section>
+
+        <!-- Features Cards -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <h5>Monitoreo de Llamadas</h5>
+                        <p>Accede a un registro completo de todas las llamadas entrantes y salientes del dispositivo monitoreado.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <h5>Control de Mensajes</h5>
+                        <p>Revisa y controla todos los mensajes SMS que se envían y reciben en el dispositivo.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card text-center">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h5>Seguimiento de Ubicación</h5>
+                        <p>Conoce en tiempo real la ubicación exacta del dispositivo, garantizando la seguridad de tus seres queridos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card text-center">
+                        <div class="icon"><i class="fas fa-history"></i></div>
+                        <h5>Historial de Navegación</h5>
+                        <p>Revisa los sitios web visitados para asegurarte de que el contenido sea apropiado y seguro.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card text-center">
+                        <div class="icon"><i class="fas fa-bell"></i></div>
+                        <h5>Alertas Personalizadas</h5>
+                        <p>Configura alertas y notificaciones en tiempo real para acciones específicas que desees monitorear.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card text-center">
+                        <div class="icon"><i class="fas fa-headphones"></i></div>
+                        <h5>Atención al Cliente 24/7</h5>
+                        <p>Disfruta de soporte y atención personalizada en cualquier momento que lo necesites.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advantages Section -->
+        <section class="advantage-section" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 advantage" data-aos="fade-right">
+                        <h5><i class="fas fa-shield-alt text-primary"></i> Seguridad de Datos</h5>
+                        <p>Tu privacidad es nuestra prioridad. Los datos de tu familia estarán siempre protegidos y encriptados.</p>
+                    </div>
+                    <div class="col-md-6 advantage" data-aos="fade-left">
+                        <h5><i class="fas fa-user-friends text-primary"></i> Fácil de Usar</h5>
+                        <p>Una interfaz intuitiva y amigable que hace que la configuración y el monitoreo sean muy sencillos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section" data-aos="fade-up">
+            <h2>¿Listo para proteger a tus seres queridos?</h2>
+            <p>Elige el plan que mejor se adapte a tus necesidades y comienza a usar Protect hoy mismo.</p>
+            <a href="{% url 'productos' %}" class="btn btn-primary mt-3">Ver Planes y Precios</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470

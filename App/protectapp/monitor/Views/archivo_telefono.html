@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect - Archivo de Teléfono</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #eef2f7;
+        }
+
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background: #343a40;
+            padding: 20px;
+            position: fixed;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .logo img {
+            width: 120px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #adb5bd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #495057;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .user-dropdown a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .user-dropdown a:hover {
+            background-color: #6c757d;
+        }
+
+        .tab-content {
+            margin-top: 20px;
+        }
+
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .media-container img,
+        .media-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .loading-message {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #343a40;
+            color: #adb5bd;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+<<<<<<< HEAD
+            <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
+=======
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+        </div>
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+        <a href="#" id="registro-link"><i class="fas fa-list"></i> Registro</a>
+        <a href="{% url 'archivo_telefono' %}" class="active"><i class="fas fa-folder-open"></i> Archivo de Teléfono</a>
+        <a href="{% url 'ubicacion' %}"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+        <a href="{% url 'grabacion' %}"><i class="fas fa-microphone"></i> Grabación en Tiempo Real</a>
+        <a href="{% url 'capturas' %}"><i class="fas fa-camera"></i> Capturas</a>
+        <a href="{% url 'exportar_datos' %}"><i class="fas fa-file-export"></i> Exportar Datos</a>
+        <a href="{% url 'verificacion_permisos' %}"><i class="fas fa-shield-alt"></i> Verificación de Permisos</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Archivo de Teléfono</h2>
+            <div class="user-info">
+                <img src="{% static 'img/cuenta.png' %}" alt="User Icon" id="user-icon">
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="{% url 'cuenta' %}">Mi Cuenta</a>
+                    <a href="{% url 'login' %}" onclick="logout()">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs for each section -->
+        <ul class="nav nav-tabs" id="archivoTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="llamadas-tab" data-toggle="tab" href="#llamadas" role="tab">Llamadas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="mensajes-tab" data-toggle="tab" href="#mensajes" role="tab">Mensajes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contactos-tab" data-toggle="tab" href="#contactos" role="tab">Contactos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="fotos-tab" data-toggle="tab" href="#fotos" role="tab">Fotos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab">Videos</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Llamadas -->
+            <div class="tab-pane fade show active" id="llamadas" role="tabpanel">
+                <h3>Historial de Llamadas</h3>
+                <p class="loading-message" id="loading-llamadas">Cargando llamadas...</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Número</th>
+                            <th>Duración</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-llamadas">
+                        <!-- Llamadas serán cargadas aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mensajes -->
+            <div class="tab-pane fade" id="mensajes" role="tabpanel">
+                <h3>Mensajes</h3>
+                <p class="loading-message" id="loading-mensajes">Cargando mensajes...</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Número</th>
+                            <th>Contenido</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-mensajes">
+                        <!-- Mensajes serán cargados aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Contactos -->
+            <div class="tab-pane fade" id="contactos" role="tabpanel">
+                <h3>Contactos</h3>
+                <p class="loading-message" id="loading-contactos">Cargando contactos...</p>
+                <ul class="list-group" id="lista-contactos">
+                    <!-- Contactos serán cargados aquí dinámicamente -->
+                </ul>
+            </div>
+
+            <!-- Fotos -->
+            <div class="tab-pane fade" id="fotos" role="tabpanel">
+                <h3>Fotos</h3>
+                <p class="loading-message" id="loading-fotos">Cargando fotos...</p>
+                <div class="media-container" id="galeria-fotos">
+                    <!-- Fotos serán cargadas aquí dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Videos -->
+            <div class="tab-pane fade" id="videos" role="tabpanel">
+                <h3>Videos</h3>
+                <p class="loading-message" id="loading-videos">Cargando videos...</p>
+                <div class="media-container" id="galeria-videos">
+                    <!-- Videos serán cargados aquí dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/archivo_telefono.js' %}"></script> <!-- JavaScript para el sondeo -->
+
+    <script>
+        // Función para alternar el despliegue del menú del usuario
+        document.getElementById('user-icon').addEventListener('click', function () {
+            const dropdown = document.getElementById('user-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+        });
+
+        // Cerrar el menú si se hace clic fuera de él
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('user-dropdown');
+            if (!event.target.closest('.user-info')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Función para cerrar sesión
+        function logout() {
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('refresh_token');
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}";
+        }
+
+        // Verificación de inicio de sesión
+        function checkLogin() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                alert('No has iniciado sesión. Redirigiendo a la página de inicio de sesión.');
+                window.location.href = "{% url 'login' %}";
+            }
+        }
+
+        // Llamar a la función de verificación al cargar la página
+        $(document).ready(function () {
+            checkLogin();
+        });
+    </script>
+</body>
+
+</html>
