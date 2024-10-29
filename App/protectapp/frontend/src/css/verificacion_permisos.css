@@ -1,0 +1,70 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #eef2f7;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.user-dropdown a, .user-dropdown button {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+}
+
+.user-dropdown a:hover, .user-dropdown button:hover {
+    background-color: #6c757d;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.table-permisos h4 {
+    margin-top: 20px;
+}
+
+.table-bordered thead th {
+    text-align: center;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #e9ecef;
+}

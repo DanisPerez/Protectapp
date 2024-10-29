@@ -1,0 +1,193 @@
+/* src/css/Account.css */
+
+.cuenta-page {
+    font-family: 'Nunito', sans-serif;
+    background-color: #eef2f7;
+}
+
+/* Sidebar */
+.cuenta-page .sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #343a40;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+.cuenta-page .sidebar .logo img {
+    width: 120px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.cuenta-page .sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    color: #adb5bd;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.cuenta-page .sidebar a.active, .cuenta-page .sidebar a:hover {
+    background-color: #495057;
+    color: #fff;
+}
+.cuenta-page .sidebar i {
+    margin-right: 10px;
+}
+
+/* Main content */
+.cuenta-page .main-content {
+    margin-left: 260px;
+    padding: 40px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.cuenta-page .main-content h2 {
+    color: #343a40;
+    font-weight: bold;
+}
+.cuenta-page .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* User info and dropdown */
+.cuenta-page .user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.cuenta-page .user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.cuenta-page .user-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #495057;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+.cuenta-page .user-dropdown.show {
+    display: block;
+}
+.cuenta-page .user-dropdown a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.cuenta-page .user-dropdown a:hover {
+    background-color: #6c757d;
+}
+
+/* Form Section */
+.cuenta-page .form-section {
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.cuenta-page .form-section h4 {
+    font-weight: bold;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.cuenta-page .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+.cuenta-page .form-group label {
+    width: 20%;
+    color: #495057;
+    font-weight: 600;
+}
+.cuenta-page .form-group input {
+    width: 60%;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.cuenta-page .form-group input:disabled {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+.cuenta-page .form-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.cuenta-page .form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message */
+.cuenta-page .text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Footer */
+.cuenta-page footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #343a40;
+    color: #adb5bd;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cuenta-page .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .cuenta-page .sidebar a {
+        text-align: center;
+        padding: 10px;
+    }
+    .cuenta-page .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .cuenta-page .form-group label,
+    .cuenta-page .form-group input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
