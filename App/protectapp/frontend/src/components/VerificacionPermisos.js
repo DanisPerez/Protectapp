@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SidebarEventos from './SidebarEventos';
+<<<<<<< HEAD
 import UserMenu from './UserMenu'; // Importamos el componente UserMenu
 import { useNavigate } from 'react-router-dom';
 import '../css/verificacion_permisos.css';
@@ -12,6 +13,18 @@ const VerificacionPermisos = () => {
     const token = localStorage.getItem('access_token');
     const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
     const navigate = useNavigate();
+=======
+import { useNavigate } from 'react-router-dom';
+import UserIcon from '../assets/img/cuenta.png';
+import '../css/verificacion_permisos.css';
+
+const VerificacionPermisos = () => {
+    const [permisos, setPermisos] = useState([]);
+    const token = localStorage.getItem('access_token');
+    const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
 
     useEffect(() => {
         if (!token || !dispositivoId) {
@@ -25,7 +38,11 @@ const VerificacionPermisos = () => {
     const obtenerPermisos = async () => {
         setLoading(true);
         try {
+<<<<<<< HEAD
             const response = await fetch(`${BASE_URL}/api/dispositivos/${dispositivoId}/verificacion-permisos/`, {
+=======
+            const response = await fetch(`/api/dispositivos/${dispositivoId}/verificacion-permisos/`, {
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                 method: 'GET',
                 headers: { Authorization: `Bearer ${token}` },
             });
@@ -43,7 +60,11 @@ const VerificacionPermisos = () => {
 
     const solicitarPermiso = async (permisoId) => {
         try {
+<<<<<<< HEAD
             const response = await fetch(`${BASE_URL}/api/dispositivos/${dispositivoId}/solicitar-permiso/${permisoId}/`, {
+=======
+            const response = await fetch(`/api/dispositivos/${dispositivoId}/solicitar-permiso/${permisoId}/`, {
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -63,12 +84,21 @@ const VerificacionPermisos = () => {
         }
     };
 
+<<<<<<< HEAD
+=======
+    const logout = () => {
+        localStorage.clear();
+        navigate('/login');
+    };
+
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
     return (
         <div className="main-layout">
             <SidebarEventos />
             <div className="main-content">
                 <div className="content-header">
                     <h2>Verificación de Permisos</h2>
+<<<<<<< HEAD
                     <UserMenu /> {/* Reemplazamos el dropdown de usuario con UserMenu */}
                 </div>
 
@@ -77,6 +107,20 @@ const VerificacionPermisos = () => {
                         <div className="spinner-border text-info" role="status">
                             <span className="sr-only">Cargando permisos...</span>
                         </div>
+=======
+                    <div className="user-info">
+                        <img src={UserIcon} alt="User Icon" id="user-icon" />
+                        <div className="user-dropdown" id="user-dropdown">
+                            <a href="/cuenta">Mi Cuenta</a>
+                            <button onClick={logout}>Cerrar Sesión</button>
+                        </div>
+                    </div>
+                </div>
+
+                {loading ? (
+                    <div className="spinner-border text-info" role="status">
+                        <span className="sr-only">Cargando permisos...</span>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                     </div>
                 ) : (
                     <div className="table-permisos">
@@ -88,9 +132,14 @@ const VerificacionPermisos = () => {
                                     <th>Permiso</th>
                                     <th>Tipo de Permiso</th>
                                     <th>Estado</th>
+<<<<<<< HEAD
                                     <th>Acción</th>
                                     <th>Crítico</th>
                                     <th>Última Verificación</th>
+=======
+                                    <th>Crítico</th>
+                                    <th>Fecha de Verificación</th>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                                 </tr>
                             </thead>
                             <tbody>
@@ -100,6 +149,7 @@ const VerificacionPermisos = () => {
                                             <td>{index + 1}</td>
                                             <td>{permiso.permiso}</td>
                                             <td>{permiso.tipo_permiso || 'No disponible'}</td>
+<<<<<<< HEAD
                                             <td>{permiso.estado_permiso ? 'Concedido' : 'Denegado'}</td> {/* Campo corregido */}
                                             <td>
                                                 {!permiso.estado_permiso && ( /* Campo corregido */
@@ -111,15 +161,22 @@ const VerificacionPermisos = () => {
                                                     </button>
                                                 )}
                                             </td>
+=======
+                                            <td>{permiso.estado ? 'Concedido' : 'Denegado'}</td>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                                             <td>{permiso.critico ? 'Sí' : 'No'}</td>
                                             <td>{permiso.fecha_verificacion || 'No disponible'}</td>
                                         </tr>
                                     ))
                                 ) : (
                                     <tr>
+<<<<<<< HEAD
                                         <td colSpan="7" className="text-center">
                                             No hay permisos disponibles para verificar.
                                         </td>
+=======
+                                        <td colSpan="6" className="text-center">No hay permisos disponibles.</td>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                                     </tr>
                                 )}
                             </tbody>

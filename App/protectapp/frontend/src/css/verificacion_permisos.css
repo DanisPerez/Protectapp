@@ -50,6 +50,7 @@ body {
     background-color: #6c757d;
 }
 
+<<<<<<< HEAD
 .loading-container {
     display: flex;
     justify-content: center;
@@ -65,6 +66,12 @@ body {
     text-align: center;
 }
 
+=======
+.table-permisos {
+    margin-top: 20px;
+}
+
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
 .table-striped tbody tr:hover {
     background-color: #e9ecef;
 }

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Productos</title>
+    <meta name="description" content="Planes y precios de la aplicación Protect para monitoreo parental">
+    <meta name="author" content="Protect Team">
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 10%;
+        }
+        .navbar-brand img {
+            width: 150px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 60px 10%;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .product-card:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .product-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .product-card .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .product-card .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Highlight Premium */
+        .premium-highlight {
+            background: linear-gradient(135deg, #ffd700, #ffbf00);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Table Comparison */
+        .comparison-table {
+            margin-top: 40px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .comparison-table thead th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .comparison-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Price and Duration Select */
+        .price-display {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-top: 10px;
+        }
+        .duration-select {
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+
+        /* Go back button */
+        .btn-back {
+            background-color: #0bb666;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <main role="main" class="product-section container">
+        <!-- Introduction -->
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2>Nuestros Planes</h2>
+            <p>Encuentra el plan perfecto para proteger y supervisar a tus seres queridos.</p>
+        </div>
+
+        <!-- Product Cards Organized -->
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card shadow-hover">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Plan Básico</h4>
+                        <p class="card-text">La opción ideal para comenzar a proteger a tus seres queridos con las funciones más esenciales.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary"></i> Monitoreo de llamadas y SMS</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Rastreo de ubicación en tiempo real</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Acceso al historial de navegación</li>
+                        </ul>
+                        <div class="duration-select">
+                            <label for="basic-duration">Selecciona la duración:</label>
+                            <select class="form-control" id="basic-duration" onchange="updatePrice('basic')">
+                                <option value="1">1 Mes - $9.99</option>
+                                <option value="3">3 Meses - $27.99</option>
+                                <option value="12">1 Año - $99.99</option>
+                            </select>
+                        </div>
+                        <div id="basic-price" class="price-display">$9.99</div>
+                        <button class="btn btn-primary mt-3" onclick="redirectToPurchase('basic')">Comprar Plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card shadow-hover border border-warning">
+                    <div class="card-body text-center">
+                        <span class="premium-highlight">Plan más Popular</span>
+                        <h4 class="card-title">Plan Premium</h4>
+                        <p class="card-text">La mejor opción para la máxima supervisión y seguridad con todas las características exclusivas.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary"></i> Todo lo del Plan Básico</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Grabación del entorno del dispositivo</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Alertas y notificaciones en tiempo real</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Atención al cliente 24/7</li>
+                        </ul>
+                        <div class="duration-select">
+                            <label for="premium-duration">Selecciona la duración:</label>
+                            <select class="form-control" id="premium-duration" onchange="updatePrice('premium')">
+                                <option value="1">1 Mes - $29.99</option>
+                                <option value="3">3 Meses - $79.99</option>
+                                <option value="12">1 Año - $249.99</option>
+                            </select>
+                        </div>
+                        <div id="premium-price" class="price-display">$29.99</div>
+                        <button class="btn btn-primary mt-3" onclick="redirectToPurchase('premium')">Comprar Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-table" data-aos="fade-up">
+            <h2 class="text-center mb-4">Comparativa de Planes</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Características</th>
+                        <th>Plan Básico</th>
+                        <th>Plan Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monitoreo de llamadas y SMS</td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Rastreo de ubicación en tiempo real</td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Acceso al historial de navegación</td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Grabación del entorno del dispositivo</td>
+                        <td><i class="fas fa-times-circle text-danger"></i></td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Alertas y notificaciones en tiempo real</td>
+                        <td><i class="fas fa-times-circle text-danger"></i></td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Atención al cliente 24/7</td>
+                        <td><i class="fas fa-times-circle text-danger"></i></td>
+                        <td><i class="fas fa-check-circle text-success"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Go back button -->
+        <div class="text-center">
+            <button class="btn-back" onclick="goBack()">Volver Atrás</button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+
+        function updatePrice(plan) {
+            let priceElement = document.getElementById(`${plan}-price`);
+            let duration = document.getElementById(`${plan}-duration`).value;
+            let price = 0;
+
+            if (plan === 'basic') {
+                if (duration == 1) price = 9.99;
+                else if (duration == 3) price = 27.99;
+                else if (duration == 12) price = 99.99;
+            } else if (plan === 'premium') {
+                if (duration == 1) price = 29.99;
+                else if (duration == 3) price = 79.99;
+                else if (duration == 12) price = 249.99;
+            }
+
+            priceElement.textContent = `$${price.toFixed(2)}`;
+        }
+
+        function redirectToPurchase(plan) {
+            const duration = document.getElementById(`${plan}-duration`).value;
+            const price = document.getElementById(`${plan}-price`).textContent;
+            alert(`Has seleccionado el ${plan === 'basic' ? 'Plan Básico' : 'Plan Premium'} por ${duration} ${duration == 1 ? 'Mes' : 'Meses'} a ${price}. Redirigiendo a la página de compra...`);
+            window.location.href =  `compra.html?plan=${plan}&duration=${duration}`;
+        }
+
+        function goBack() {
+            window.history.back(); // Volver a la página anterior
+        }
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470

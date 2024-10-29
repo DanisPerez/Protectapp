@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import UserMenu from './UserMenu';
+=======
+// src/components/RegistroEventos.js
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import UserIcon from '../assets/img/cuenta.png';
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
 import '../css/RegistroEventos.css';
 
 const RegistroEventos = () => {
@@ -66,24 +73,46 @@ const RegistroEventos = () => {
             if (response.ok) {
                 const data = await response.json();
                 setSelectedEvent(data);
+<<<<<<< HEAD
+=======
+                document.getElementById('eventoModal').style.display = 'block';
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
             } else {
                 throw new Error('Error al cargar los detalles del evento');
             }
         } catch (error) {
+<<<<<<< HEAD
             setErrorMessage('Error al cargar los detalles del evento');
+=======
+            alert('Error al cargar los detalles del evento');
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
             console.error(error);
         }
     };
 
     const closeModal = () => {
         setSelectedEvent(null);
+<<<<<<< HEAD
+=======
+        document.getElementById('eventoModal').style.display = 'none';
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
     };
 
     return (
         <div className="main-content registro-eventos">
             <div className="content-header">
                 <h2>Registro de Eventos</h2>
+<<<<<<< HEAD
                 <UserMenu />
+=======
+                <div className="user-info">
+                    <img src={UserIcon} alt="User Icon" id="user-icon" />
+                    <div className="user-dropdown">
+                        <Link to="/cuenta">Mi Cuenta</Link>
+                        <Link to="/login" onClick={() => { localStorage.removeItem('access_token'); }}>Cerrar Sesión</Link>
+                    </div>
+                </div>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
             </div>
 
             <div className="table-section">
@@ -116,8 +145,13 @@ const RegistroEventos = () => {
             </div>
 
             {selectedEvent && (
+<<<<<<< HEAD
                 <div className="modal-overlay" onClick={closeModal}>
                     <div className="modal-content small-modal" onClick={(e) => e.stopPropagation()}>
+=======
+                <div className="modal" id="eventoModal">
+                    <div className="modal-content">
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                         <span className="close" onClick={closeModal}>&times;</span>
                         <h5>Detalles del Evento</h5>
                         <p><strong>Tipo de Evento:</strong> {selectedEvent.tipo_evento}</p>
@@ -131,4 +165,8 @@ const RegistroEventos = () => {
     );
 };
 
+<<<<<<< HEAD
 export default RegistroEventos;
+=======
+export default RegistroEventos;
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145

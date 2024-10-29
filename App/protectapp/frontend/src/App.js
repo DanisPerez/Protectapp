@@ -26,6 +26,7 @@ import './css/Home.css';
 function App() {
     const location = useLocation();
 
+<<<<<<< HEAD
     // Detectar si la ruta es una de las páginas principales
     const isMainPage = ['/inicio', '/mi_producto', '/cuenta', '/mis_dispositivos'].includes(location.pathname);
 
@@ -33,13 +34,29 @@ function App() {
     const isEventoPage = 
         ['/reg_event', '/archivo_telefono', '/ubicacion', '/grabacion', '/capturas', '/exportar_datos', '/verificacion_permisos'].includes(location.pathname) ||
         /^\/dispositivo\/\d+\/reg_event$/.test(location.pathname);
+=======
+    const eventoPages = [
+        '/reg_event', 
+        '/dispositivo/:dispositivoId/reg_event', 
+        '/archivo_telefono', 
+        '/ubicacion',
+        '/grabacion',
+        '/capturas',
+        '/exportar_datos',
+        '/verificacion_permisos'
+    ];
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
 
     return (
         <div className="App">
             <Header />
+<<<<<<< HEAD
             
             {/* Renderizado de Sidebar según la sección */}
             {isMainPage ? (
+=======
+            {['/inicio', '/mi_producto', '/cuenta', '/mis_dispositivos'].includes(location.pathname) ? (
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                 <div className="main-layout">
                     <Sidebar />
                     <div className="content">
@@ -51,7 +68,11 @@ function App() {
                         </Routes>
                     </div>
                 </div>
+<<<<<<< HEAD
             ) : isEventoPage ? (
+=======
+            ) : eventoPages.includes(location.pathname) ? (
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                 <div className="main-layout">
                     <SidebarEventos />
                     <div className="content">
@@ -75,10 +96,17 @@ function App() {
                     </Routes>
                 </div>
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
             <Footer />
         </div>
     );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145

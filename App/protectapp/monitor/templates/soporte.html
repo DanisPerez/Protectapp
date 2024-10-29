@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Soporte</title>
+    <meta name="description" content="Página de soporte de Protect para brindar ayuda y asistencia a los usuarios.">
+    <meta name="author" content="Protect Team">
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 10%;
+        }
+        .navbar-brand img {
+            width: 150px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Support Section */
+        .support-section {
+            padding: 60px 10%;
+            background-color: #fff;
+        }
+
+        .support-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h5 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .faq-section {
+            background: #e3f2fd;
+            padding: 40px 10%;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .faq-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .faq-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: #007bff;
+            padding: 40px 10%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section .btn-primary {
+            background-color: #ffd700;
+            border: none;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: #ffbf00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'caracteristicas' %}">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'recursos' %}">Recursos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'terminos' %}">Términos y condiciones</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="support-section container">
+        <!-- Introduction -->
+        <div class="support-heading" data-aos="fade-up">
+            <h2>Centro de Soporte</h2>
+            <p>¿Necesitas ayuda? Nuestro equipo está aquí para asistirte en lo que necesites.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-form">
+                    <h5>Formulario de Contacto</h5>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- FAQs Section -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-section">
+                    <h5>Preguntas Frecuentes (FAQs)</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'preguntas' %}" class="faq-link"><i class="fas fa-angle-right"></i> ¿Cómo puedo recuperar mi contraseña?</a></li>
+                        <li><a href="{% url 'preguntas' %}" class="faq-link"><i class="fas fa-angle-right"></i> ¿Cómo actualizo mi información de cuenta?</a></li>
+                        <li><a href="{% url 'preguntas' %}" class="faq-link"><i class="fas fa-angle-right"></i> ¿Dónde puedo descargar la aplicación?</a></li>
+                        <li><a href="{% url 'preguntas' %}" class="faq-link"><i class="fas fa-angle-right"></i> ¿Cómo contacto con el soporte técnico?</a></li>
+                        <li><a href="{% url 'preguntas' %}" class="faq-link"><i class="fas fa-angle-right"></i> ¿Cuáles son los métodos de pago disponibles?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" data-aos="fade-up">
+        <h2>¿Necesitas más ayuda?</h2>
+        <p>No dudes en contactarnos. Estamos aquí para brindarte el mejor soporte posible.</p>
+        <a href="{% url 'soporte' %}" class="btn btn-primary mt-3">Contactar Soporte</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470

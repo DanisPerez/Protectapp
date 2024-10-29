@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+=======
+// src/components/LoginSection.js
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importa Link
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
 import '../css/LoginSection.css';
 import LoginImage from '../assets/img/Login.png';
 import BackImage from '../assets/img/atras.JPG';
@@ -16,14 +22,23 @@ const LoginSection = () => {
             return;
         }
         try {
+<<<<<<< HEAD
             const response = await fetch('http://localhost:8000/api/login/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+=======
+            const response = await fetch('/api/login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': 'csrftoken_placeholder', // Agregar el token CSRF si es necesario
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                 },
                 body: JSON.stringify({ email, password }),
             });
 
+<<<<<<< HEAD
             if (response.ok) {
                 const data = await response.json();
                 localStorage.setItem('access_token', data.access);
@@ -32,6 +47,15 @@ const LoginSection = () => {
                 const data = await response.json();
                 setErrorMessage(data.detail || 'Credenciales inválidas');
             }
+=======
+            if (!response.ok) {
+                const data = await response.json();
+                setErrorMessage(data.detail || 'Credenciales inválidas');
+                return;
+            }
+
+            window.location.href = '/inicio';
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
         } catch (error) {
             console.error('Error al iniciar sesión:', error);
             setErrorMessage('Ocurrió un error. Intente nuevamente.');
@@ -41,7 +65,11 @@ const LoginSection = () => {
     return (
         <section className="login-section">
             <div className="login-image">
+<<<<<<< HEAD
                 <img src={LoginImage} alt="Pantalla de inicio de sesión" className="img-fluid rounded" />
+=======
+            <img src={LoginImage} alt="Pantalla de inicio de sesión" className="img-fluid rounded" />
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
             </div>
             <div className="login-form-container">
                 <h2>Inicie sesión con su ID de Protect</h2>

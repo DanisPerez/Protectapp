@@ -2,7 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SidebarEventos from './SidebarEventos';
+<<<<<<< HEAD
 import UserMenu from './UserMenu'; // Importa UserMenu
+=======
+import UserIcon from '../assets/img/cuenta.png'; 
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
 import '../css/PhoneArchive.css';
 
 const ArchivoDeTelefono = () => {
@@ -10,6 +14,10 @@ const ArchivoDeTelefono = () => {
     const [data, setData] = useState({ llamadas: [], mensajes: [], contactos: [], fotos: [], videos: [] });
     const [loadingMessage, setLoadingMessage] = useState('');
 
+<<<<<<< HEAD
+=======
+    // Verificación y configuración del dispositivo seleccionado
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
     const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
     if (!dispositivoId) {
         alert('No se ha seleccionado un dispositivo.');
@@ -56,7 +64,23 @@ const ArchivoDeTelefono = () => {
             <div className="main-content">
                 <div className="content-header">
                     <h2>Archivo de Teléfono</h2>
+<<<<<<< HEAD
                     <UserMenu /> {/* Reemplazamos el menú manual por UserMenu */}
+=======
+                    <div className="user-info">
+                        <img src={UserIcon} alt="User Icon" id="user-icon" onClick={() => {
+                            const dropdown = document.getElementById("user-dropdown");
+                            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+                        }} />
+                        <div className="user-dropdown" id="user-dropdown">
+                            <Link to="/cuenta">Mi Cuenta</Link>
+                            <Link to="/login" onClick={() => {
+                                localStorage.removeItem('access_token');
+                                window.location.href = "/login";
+                            }}>Cerrar Sesión</Link>
+                        </div>
+                    </div>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
                 </div>
 
                 {/* Navegación entre pestañas */}
@@ -149,4 +173,8 @@ const ArchivoDeTelefono = () => {
     );
 };
 
+<<<<<<< HEAD
 export default ArchivoDeTelefono;
+=======
+export default ArchivoDeTelefono;
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145

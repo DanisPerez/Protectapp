@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protect - Términos de Servicio</title>
+    <meta name="description" content="Términos y condiciones de uso de Protect para garantizar un servicio transparente y confiable.">
+    <meta name="author" content="Protect Team">
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 10%;
+        }
+        .navbar-brand img {
+            width: 150px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Terms Section */
+        .terms-section {
+            padding: 60px 10%;
+            background-color: #fff;
+        }
+
+        .terms-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .terms-section h4 {
+            color: #007bff;
+            margin-top: 30px;
+        }
+
+        .terms-text {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Highlight */
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: #007bff;
+            padding: 40px 10%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section .btn-primary {
+            background-color: #ffd700;
+            border: none;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: #ffbf00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'caracteristicas' %}">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'recursos' %}">Recursos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'politica' %}">Política de privacidad</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="terms-section container">
+        <div class="terms-heading" data-aos="fade-up">
+            <h2>Términos de Servicio</h2>
+            <p>Al utilizar nuestro servicio, usted acepta cumplir con los siguientes términos y condiciones.</p>
+        </div>
+
+        <!-- Terms Details -->
+        <section class="terms-text" data-aos="fade-up" data-aos-delay="100">
+            <h4>1. Condiciones de Uso</h4>
+            <p>El uso de la aplicación y el sitio web de Protect está sujeto a estos términos y condiciones. Al acceder y utilizar nuestro servicio, usted acepta cumplir con todas las leyes y regulaciones aplicables.</p>
+            
+            <h4>2. Registro y Cuenta</h4>
+            <p>Para utilizar algunas funciones de Protect, deberá registrarse y crear una cuenta. Usted es responsable de mantener la confidencialidad de su información de acceso y de todas las actividades que ocurran bajo su cuenta.</p>
+            
+            <h4>3. Pagos y Reembolsos</h4>
+            <p>Los pagos se procesan de manera segura a través de nuestra pasarela de pago. Ofrecemos una garantía de reembolso de 7 días si no está satisfecho con nuestro servicio. Para solicitar un reembolso, contáctenos a través de nuestro formulario de contacto.</p>
+            
+            <h4>4. Propiedad Intelectual</h4>
+            <p>Todos los derechos de propiedad intelectual sobre el contenido y la funcionalidad de la aplicación Protect pertenecen a nuestra empresa. Usted no está autorizado a copiar, distribuir ni modificar ningún material sin nuestro consentimiento previo por escrito.</p>
+            
+            <h4>5. Limitación de Responsabilidad</h4>
+            <p>Protect no será responsable de ningún daño directo, indirecto, incidental o consecuente que resulte del uso o la imposibilidad de utilizar nuestro servicio.</p>
+            
+            <h4>6. Modificaciones de los Términos</h4>
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Le notificaremos sobre los cambios a través de nuestro sitio web o por correo electrónico. El uso continuado de nuestro servicio después de la publicación de los cambios constituirá su aceptación de los nuevos términos.</p>
+            
+            <h4>7. Contacto</h4>
+            <p>Para preguntas o inquietudes sobre estos términos de servicio, puede contactarnos en <a href="mailto:contacto@protect.com">contacto@protect.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" data-aos="fade-up">
+        <h2>Únase a Protect y mantenga a su familia segura</h2>
+        <p>Conozca más sobre nuestros planes y cómo podemos ayudarle a proteger lo que más importa.</p>
+        <a href="{% url 'productos' %}" class="btn btn-primary mt-3">Ver Planes y Precios</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200 });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
