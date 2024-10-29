@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect - Mi Producto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f4f7fc;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #343a40;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        .sidebar .logo img {
+            width: 120px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+
+        .sidebar i {
+            margin-right: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h2 {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+<<<<<<< HEAD
+
+        /* Product Box */
+
+
+        /* Product Box */
+
+
+        /* Product Box */
+
+
+        /* Content Box */
+
+        /* Product Box */
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+        /* Product Box */
+=======
+<<<<<<< HEAD
+        /* Product Box */
+=======
+<<<<<<< HEAD
+        /* Product Box */
+=======
+<<<<<<< HEAD
+        /* Content Box */
+=======
+        /* Product Box */
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        .product-box {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .product-box h3 {
+            color: #6c757d;
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .product-box p {
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        .btn-plan {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-plan:hover {
+            background-color: #0056b3;
+        }
+
+        /* User info */
+        .user-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #495057;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .user-dropdown a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .user-dropdown a:hover {
+            background-color: #6c757d;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #343a40;
+            color: #adb5bd;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+<<<<<<< HEAD
+
+            <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
+
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+            <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
+=======
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        </div>
+        <a href="{% url 'inicio' %}"><i class="fas fa-home"></i> Inicio</a>
+        <a href="{% url 'mi_producto' %}" class="active"><i class="fas fa-box"></i> Mi Producto</a>
+        <a href="{% url 'cuenta' %}"><i class="fas fa-user"></i> Mi Cuenta</a>
+        <a href="{% url 'mis_dispositivos' %}"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Bienvenido</h2>
+            <div class="user-info">
+                <img src="{% static 'img/cuenta.png' %}" alt="User Icon" id="user-icon">
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="{% url 'cuenta' %}">Mi Cuenta</a>
+                    <a href="{% url 'login' %}" onclick="logout()">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Section -->
+        <div class="product-box">
+            <h3>No tienes un producto adquirido</h3>
+            <p>Adquiere un plan para comenzar a proteger a tus seres queridos.</p>
+            <a href="{% url 'compras' %}" class="btn-plan">Ver Planes</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+        <a href="{% url 'politica' %}"><i class="fas fa-lock"></i> Política de privacidad</a> | 
+        <a href="{% url 'terminos' %}"><i class="fas fa-file-contract"></i> Términos de servicio</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<<<<<<< HEAD
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function logout() {
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}"; // Redirige a la página de inicio de sesión
+        }
+
+        $(document).ready(function () {
+<<<<<<< HEAD
+
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+=======
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Función para cerrar sesión
+        function logout() {
+            // Elimina el token JWT al cerrar sesión
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('refresh_token');
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}";
+        }
+
+        // Verificar si el usuario está logueado
+        function checkLogin() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                // Mostrar mensaje y redirigir al login si no está logueado
+                alert("No has iniciado sesión. Redirigiendo a la página de inicio de sesión.");
+                window.location.href = "{% url 'login' %}";
+            }
+        }
+
+        $(document).ready(function () {
+            // Ejecutar la verificación de inicio de sesión al cargar la página
+            checkLogin();
+
+            // Mostrar u ocultar el dropdown del usuario
+<<<<<<< HEAD
+
+
+
+
+
+
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+            $('#user-icon').on('click', function () {
+                $('#user-dropdown').toggle();
+            });
+
+<<<<<<< HEAD
+
+            // Ocultar el dropdown cuando se hace clic fuera de él
+
+
+            // Ocultar el dropdown cuando se hace clic fuera de él
+
+
+            // Ocultar el dropdown cuando se hace clic fuera de él
+
+
+            // Hide dropdown when clicking outside
+
+            // Ocultar el dropdown cuando se hace clic fuera de él
+ a8d19f143da4dcdf7a22fd08e935b212cf57580a
+ b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+ b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+ afc917d1d14c3730d6946130d053056968a08dc6
+=======
+<<<<<<< HEAD
+            // Ocultar el dropdown cuando se hace clic fuera de él
+=======
+<<<<<<< HEAD
+            // Ocultar el dropdown cuando se hace clic fuera de él
+=======
+<<<<<<< HEAD
+            // Ocultar el dropdown cuando se hace clic fuera de él
+=======
+<<<<<<< HEAD
+            // Hide dropdown when clicking outside
+=======
+            // Ocultar el dropdown cuando se hace clic fuera de él
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('.user-info').length) {
+                    $('#user-dropdown').hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
