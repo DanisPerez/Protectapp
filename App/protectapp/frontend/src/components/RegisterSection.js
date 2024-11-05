@@ -1,6 +1,10 @@
 // src/components/RegisterSection.js
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import { Link } from 'react-router-dom'; // Importa Link
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 import '../css/RegisterSection.css';
 import LoginImage from '../assets/img/Login.png';
 import BackImage from '../assets/img/atras.JPG';
@@ -9,10 +13,15 @@ const RegisterSection = () => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+<<<<<<< HEAD
+=======
+    const [errorMessage, setErrorMessage] = useState('');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+<<<<<<< HEAD
         // Validaciones del formulario con alertas
         if (!username.match(/^[a-zA-Z0-9@.+-_]+$/)) {
             alert('Error: El nombre de usuario contiene caracteres no válidos.');
@@ -20,6 +29,15 @@ const RegisterSection = () => {
         }
         if (password.length < 8) {
             alert('Error: La contraseña debe tener al menos 8 caracteres.');
+=======
+        // Validaciones del formulario
+        if (!username.match(/^[a-zA-Z0-9@.+-_]+$/)) {
+            setErrorMessage('El nombre de usuario contiene caracteres no válidos.');
+            return;
+        }
+        if (password.length < 8) {
+            setErrorMessage('La contraseña debe tener al menos 8 caracteres.');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
             return;
         }
 
@@ -33,6 +51,7 @@ const RegisterSection = () => {
             const data = await response.json();
 
             if (response.ok) {
+<<<<<<< HEAD
                 alert('Registro exitoso. Redirigiendo a la página de inicio de sesión...');
                 window.location.href = '/login';
             } else {
@@ -45,6 +64,15 @@ const RegisterSection = () => {
             }
         } catch (error) {
             alert('Ocurrió un error. Intente de nuevo.');
+=======
+                alert('Registro exitoso');
+                window.location.href = '/login';
+            } else {
+                setErrorMessage(data.error || 'Error en el registro. Intente de nuevo.');
+            }
+        } catch (error) {
+            setErrorMessage('Ocurrió un error. Intente de nuevo.');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
         }
     };
 
@@ -56,7 +84,11 @@ const RegisterSection = () => {
             <div className="register-form-container">
                 <h2>Regístrese en Protect</h2>
                 <p className="text-center">
+<<<<<<< HEAD
                     ¿Ya tiene una cuenta? <Link to="/login">Inicie sesión</Link>
+=======
+                ¿Ya tiene una cuenta? <Link to="/login">Inicie sesión</Link>
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                 </p>
 
                 <div className="social-buttons">
@@ -104,7 +136,11 @@ const RegisterSection = () => {
                             required
                         />
                     </div>
+<<<<<<< HEAD
 
+=======
+                    {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                     <button type="submit" className="btn btn-primary btn-block mt-3">Crear cuenta</button>
                 </form>
 

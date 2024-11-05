@@ -6,7 +6,11 @@ import { Link, useLocation } from 'react-router-dom';
 import ProtectLogoInicio from '../assets/img/Protect2.png';
 
 const Sidebar = () => {
+<<<<<<< HEAD
     const location = useLocation(); 
+=======
+    const location = useLocation(); // Obtiene la ruta actual
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 
     return (
         <div className="sidebar">

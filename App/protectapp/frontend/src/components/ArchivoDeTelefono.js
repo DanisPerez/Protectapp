@@ -1,15 +1,35 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import SidebarEventos from './SidebarEventos';
 import UserMenu from './UserMenu';
+=======
+// src/components/ArchivoDeTelefono.js
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import SidebarEventos from './SidebarEventos';
+<<<<<<< HEAD
+import UserMenu from './UserMenu'; // Importa UserMenu
+=======
+import UserIcon from '../assets/img/cuenta.png'; 
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 import '../css/PhoneArchive.css';
 
 const ArchivoDeTelefono = () => {
     const [activeTab, setActiveTab] = useState('llamadas');
     const [data, setData] = useState({ llamadas: [], mensajes: [], contactos: [], fotos: [], videos: [] });
     const [loadingMessage, setLoadingMessage] = useState('');
+<<<<<<< HEAD
     const [searchTerm, setSearchTerm] = useState('');
     const [isAscending, setIsAscending] = useState(true); // Para controlar el orden de las fechas
 
+=======
+
+<<<<<<< HEAD
+=======
+    // Verificación y configuración del dispositivo seleccionado
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
     const dispositivoId = localStorage.getItem('dispositivoSeleccionado');
     if (!dispositivoId) {
         alert('No se ha seleccionado un dispositivo.');
@@ -50,6 +70,7 @@ const ArchivoDeTelefono = () => {
         loadTabData(activeTab);
     }, [activeTab]);
 
+<<<<<<< HEAD
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
@@ -71,15 +92,40 @@ const ArchivoDeTelefono = () => {
             return isAscending ? dateA - dateB : dateB - dateA;
         });
 
+=======
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
     return (
         <div className="main-layout">
             <SidebarEventos />
             <div className="main-content">
                 <div className="content-header">
                     <h2>Archivo de Teléfono</h2>
+<<<<<<< HEAD
                     <UserMenu />
                 </div>
 
+=======
+<<<<<<< HEAD
+                    <UserMenu /> {/* Reemplazamos el menú manual por UserMenu */}
+=======
+                    <div className="user-info">
+                        <img src={UserIcon} alt="User Icon" id="user-icon" onClick={() => {
+                            const dropdown = document.getElementById("user-dropdown");
+                            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+                        }} />
+                        <div className="user-dropdown" id="user-dropdown">
+                            <Link to="/cuenta">Mi Cuenta</Link>
+                            <Link to="/login" onClick={() => {
+                                localStorage.removeItem('access_token');
+                                window.location.href = "/login";
+                            }}>Cerrar Sesión</Link>
+                        </div>
+                    </div>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+                </div>
+
+                {/* Navegación entre pestañas */}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                 <ul className="nav nav-tabs">
                     {['llamadas', 'mensajes', 'contactos', 'fotos', 'videos'].map((tab) => (
                         <li className="nav-item" key={tab}>
@@ -93,6 +139,7 @@ const ArchivoDeTelefono = () => {
                     ))}
                 </ul>
 
+<<<<<<< HEAD
                 <div className="tab-content">
                     {loadingMessage && <p className="loading-message">{loadingMessage}</p>}
                     <div className="tab-pane fade show active">
@@ -126,6 +173,50 @@ const ArchivoDeTelefono = () => {
                                     </tbody>
                                 </table>
                             </div>
+=======
+                {/* Contenido de las pestañas */}
+                <div className="tab-content">
+                    {loadingMessage && <p className="loading-message">{loadingMessage}</p>}
+                    <div className="tab-pane fade show active">
+                        {activeTab === 'llamadas' && (
+                            <table className="table">
+                                <thead>
+                                    <tr><th>#</th><th>Número</th><th>Duración</th><th>Fecha</th><th>Hora</th><th>Tipo</th></tr>
+                                </thead>
+                                <tbody>
+                                    {data.llamadas.map((llamada, index) => (
+                                        <tr key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>{llamada.numero}</td>
+                                            <td>{llamada.duracion} seg</td>
+                                            <td>{llamada.fecha}</td>
+                                            <td>{llamada.hora}</td>
+                                            <td>{llamada.tipo}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        )}
+
+                        {activeTab === 'mensajes' && (
+                            <table className="table">
+                                <thead>
+                                    <tr><th>#</th><th>Número</th><th>Contenido</th><th>Fecha</th><th>Hora</th><th>Tipo</th></tr>
+                                </thead>
+                                <tbody>
+                                    {data.mensajes.map((mensaje, index) => (
+                                        <tr key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>{mensaje.numero}</td>
+                                            <td>{mensaje.contenido}</td>
+                                            <td>{mensaje.fecha}</td>
+                                            <td>{mensaje.hora}</td>
+                                            <td>{mensaje.tipo}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                         )}
 
                         {activeTab === 'contactos' && (
@@ -160,4 +251,12 @@ const ArchivoDeTelefono = () => {
     );
 };
 
+<<<<<<< HEAD
 export default ArchivoDeTelefono;
+=======
+<<<<<<< HEAD
+export default ArchivoDeTelefono;
+=======
+export default ArchivoDeTelefono;
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f

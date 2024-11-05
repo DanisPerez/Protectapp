@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Contenedor principal */
 .main-layout {
     display: flex;
@@ -180,3 +181,25 @@
     margin-left: 10px;
 }
 
+=======
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.loading-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.tab-content table {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f

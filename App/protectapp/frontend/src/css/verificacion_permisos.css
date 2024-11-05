@@ -50,6 +50,10 @@ body {
     background-color: #6c757d;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 .loading-container {
     display: flex;
     justify-content: center;
@@ -65,6 +69,7 @@ body {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .table-striped tbody tr:hover {
     background-color: #e9ecef;
 }
@@ -101,3 +106,14 @@ body {
     cursor: pointer;
     color: #333;
 }
+=======
+=======
+.table-permisos {
+    margin-top: 20px;
+}
+
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+.table-striped tbody tr:hover {
+    background-color: #e9ecef;
+}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f

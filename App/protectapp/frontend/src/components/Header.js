@@ -1,8 +1,13 @@
 // src/components/Header.js
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import ProtectLogoInicio from '../assets/img/Protect2.png'; 
 import ProtectLogo from '../assets/img/Protect1.png';       
+=======
+import ProtectLogoInicio from '../assets/img/Protect2.png'; // Logo para la página de inicio
+import ProtectLogo from '../assets/img/Protect1.png';       // Logo para las demás páginas
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 
 const Header = () => {
     const location = useLocation();
@@ -17,7 +22,11 @@ const Header = () => {
                     </a>
                 ) : (
                     // Mostrar Protect1.png en todas las demás páginas
+<<<<<<< HEAD
                     <a className="navbar-brand" href="/login">
+=======
+                    <a className="navbar-brand" href="/">
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                         <img src={ProtectLogo} alt="Logo Protect" className="img-fluid" />
                     </a>
                 )}

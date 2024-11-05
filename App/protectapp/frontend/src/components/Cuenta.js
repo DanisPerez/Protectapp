@@ -1,7 +1,18 @@
 // src/components/Cuenta.js
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import '../css/Account.css';
 import UserMenu from './UserMenu'; // Importa el componente UserMenu
+=======
+<<<<<<< HEAD
+import '../css/Account.css';
+import UserMenu from './UserMenu'; // Importa el componente UserMenu
+=======
+import { Link } from 'react-router-dom';
+import UserIcon from '../assets/img/cuenta.png';
+import '../css/Account.css';
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 
 const Cuenta = () => {
     const [usuario, setUsuario] = useState({
@@ -12,7 +23,10 @@ const Cuenta = () => {
     });
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+<<<<<<< HEAD
     const [isEditing, setIsEditing] = useState(false); // Nuevo estado para controlar el modo de edición
+=======
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
 
     useEffect(() => {
         obtenerUsuario();
@@ -26,7 +40,15 @@ const Cuenta = () => {
             return;
         }
         try {
+<<<<<<< HEAD
             const response = await fetch('http://localhost:8000/api/user/', {
+=======
+<<<<<<< HEAD
+            const response = await fetch('http://localhost:8000/api/user/', {
+=======
+            const response = await fetch('http://localhost:8000/api/usuarios/', {
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -55,7 +77,15 @@ const Cuenta = () => {
             return;
         }
         try {
+<<<<<<< HEAD
             const response = await fetch('http://localhost:8000/api/user/', {
+=======
+<<<<<<< HEAD
+            const response = await fetch('http://localhost:8000/api/user/', {
+=======
+            const response = await fetch('http://localhost:8000/api/usuarios/', {
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -69,7 +99,10 @@ const Cuenta = () => {
             if (response.ok) {
                 alert('Usuario actualizado');
                 obtenerUsuario();
+<<<<<<< HEAD
                 setIsEditing(false); // Vuelve el botón a modo "Editar" después de guardar
+=======
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
             } else {
                 setErrorMessage('Error al actualizar el usuario.');
             }
@@ -78,6 +111,7 @@ const Cuenta = () => {
         }
     };
 
+<<<<<<< HEAD
     const handleEditClick = () => {
         if (isEditing) {
             actualizarUsuario();
@@ -85,11 +119,36 @@ const Cuenta = () => {
         setIsEditing(!isEditing); // Alterna entre Editar y Guardar
     };
 
+=======
+<<<<<<< HEAD
+=======
+    const logout = () => {
+        localStorage.removeItem('access_token');
+        alert("Has cerrado sesión.");
+        window.location.href = "/login";
+    };
+
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
     return (
         <div className="cuenta-page main-content">
             <div className="content-header">
                 <h2>Centro de Miembros Protect</h2>
+<<<<<<< HEAD
                 <UserMenu /> {/* Aquí está el menú de usuario */}
+=======
+<<<<<<< HEAD
+                <UserMenu /> {/* Aquí está el menú de usuario */}
+=======
+                <div className="user-info">
+                    <img src={UserIcon} alt="User Icon" onClick={() => document.getElementById("user-dropdown").classList.toggle("show")} />
+                    <div className="user-dropdown" id="user-dropdown">
+                        <Link to="/cuenta">Mi Cuenta</Link>
+                        <Link to="/login" onClick={logout}>Cerrar Sesión</Link>
+                    </div>
+                </div>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
             </div>
 
             <div className="form-section">
@@ -97,11 +156,16 @@ const Cuenta = () => {
                 <form onSubmit={(e) => { e.preventDefault(); actualizarUsuario(); }}>
                     <div className="form-group">
                         <label>Nombre Completo:</label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                         <input
                             type="text"
                             id="nombre"
                             value={usuario.nombre}
                             onChange={(e) => setUsuario({ ...usuario, nombre: e.target.value })}
+<<<<<<< HEAD
                             disabled={!isEditing} // Deshabilitado cuando no está en modo edición
                             autoComplete="name"
                         />
@@ -110,11 +174,45 @@ const Cuenta = () => {
                             onClick={handleEditClick}
                         >
                             {isEditing ? "Guardar" : "Editar"}
+=======
+                            disabled
+                            autoComplete="name" // Añade autocomplete para el nombre
+                        />
+                        <button
+                            type="button"
+                            onClick={() => {
+                                const inputNombre = document.getElementById('nombre');
+                                inputNombre.disabled = !inputNombre.disabled;
+                                if (inputNombre.disabled) {
+                                    actualizarUsuario();
+                                }
+                            }}
+                        >
+=======
+                        <input type="text" id="nombre" value={usuario.nombre} onChange={(e) => setUsuario({ ...usuario, nombre: e.target.value })} disabled />
+                        <button type="button" onClick={() => {
+                            const inputNombre = document.getElementById('nombre');
+                            inputNombre.disabled = !inputNombre.disabled;
+                            if (inputNombre.disabled) {
+                                actualizarUsuario();
+                            }
+                        }}>
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+                            {document.getElementById('nombre') && document.getElementById('nombre').disabled ? "Editar" : "Guardar"}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                         </button>
                     </div>
                     <div className="form-group">
                         <label>Correo Electrónico:</label>
+<<<<<<< HEAD
                         <input type="email" value={usuario.email} disabled autoComplete="email" />
+=======
+<<<<<<< HEAD
+                        <input type="email" value={usuario.email} disabled autoComplete="email" />
+=======
+                        <input type="email" value={usuario.email} disabled />
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                     </div>
                     <div className="form-group">
                         <label>Fecha de Registro:</label>
@@ -122,6 +220,10 @@ const Cuenta = () => {
                     </div>
                     <div className="form-group">
                         <label>Estado Activo:</label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                         <input type="text" value={usuario.esActivo} disabled autoComplete="username" />
                     </div>
                     <div className="form-group">
@@ -130,8 +232,20 @@ const Cuenta = () => {
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+<<<<<<< HEAD
                             autoComplete="current-password"
                         />
+=======
+                            autoComplete="current-password" // Añade autocomplete para mejorar accesibilidad y seguridad
+                        />
+=======
+                        <input type="text" value={usuario.esActivo} disabled />
+                    </div>
+                    <div className="form-group">
+                        <label>Contraseña:</label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
                         <button type="submit" className="btn btn-primary">Actualizar Contraseña</button>
                     </div>
                     {errorMessage && <div className="text-danger">{errorMessage}</div>}
