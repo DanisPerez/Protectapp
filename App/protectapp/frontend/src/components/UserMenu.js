@@ -1,7 +1,15 @@
 // src/components/UserMenu.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import UserIcon from '../assets/img/cuenta.png'; 
+=======
+<<<<<<< HEAD
+import UserIcon from '../assets/img/cuenta.png'; 
+=======
+import UserIcon from '../assets/img/cuenta.png'; // Asegúrate de ajustar esta ruta según tu estructura de archivos
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 import '../css/Account.css';
 
 const UserMenu = () => {

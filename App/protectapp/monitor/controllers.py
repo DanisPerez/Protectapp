@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 import csv
 import logging 
 import pandas as pd
@@ -5,30 +19,105 @@ from reportlab.pdfgen import canvas
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.utils import timezone
+<<<<<<< HEAD
 from .models import Fotos
+=======
+<<<<<<< HEAD
+from .models import Fotos
+=======
+<<<<<<< HEAD
+from .models import Fotos
+=======
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render
+<<<<<<< HEAD
 from rest_framework.parsers import MultiPartParser
 from django.db.models import Count
+=======
+<<<<<<< HEAD
+from django.db.models import Count
+=======
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 from django.http import JsonResponse, HttpResponseNotAllowed
 from django.views.decorators.http import require_http_methods
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import status 
+<<<<<<< HEAD
 from rest_framework.decorators import api_view, permission_classes, parser_classes
 from rest_framework.response import Response
 
 from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento, Evento
 from .serializers import DispositivoSerializer, UserSerializer, UserRegisterSerializer, LlamadasSerializer, MensajesSerializer, ContactosSerializer, FotosSerializer, VideosSerializer, UbicacionesSerializer, GrabacionesLlamadasSerializer, GrabacionesPantallaSerializer, CapturasPantallaSerializer, VerificacionPermisosSerializer, HistorialEventoSerializer
 
+=======
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+
+<<<<<<< HEAD
+from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento, Evento
+from .serializers import DispositivoSerializer, UserSerializer, UserRegisterSerializer, LlamadasSerializer, MensajesSerializer, ContactosSerializer, FotosSerializer, VideosSerializer, UbicacionesSerializer, GrabacionesLlamadasSerializer, GrabacionesPantallaSerializer, CapturasPantallaSerializer, VerificacionPermisosSerializer, HistorialEventoSerializer
+
+=======
+from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, VerificacionPermisos, HistorialEvento
+from .serializers import DispositivoSerializer, UserSerializer, UserRegisterSerializer, LlamadasSerializer, MensajesSerializer, ContactosSerializer, FotosSerializer, VideosSerializer, UbicacionesSerializer, GrabacionesLlamadasSerializer, GrabacionesPantallaSerializer, CapturasPantallaSerializer, VerificacionPermisosSerializer, HistorialEventoSerializer
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # ----------------------------------------------------
 # API Overview
 # ----------------------------------------------------
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+
+import logging 
+import json
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import get_object_or_404, render, redirect
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import IsAuthenticated
+from rest_framework import status 
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+
+from .models import Dispositivo, Llamadas, Mensajes, Contactos, Fotos, Videos, Ubicaciones, GrabacionesLlamadas, GrabacionesPantalla, CapturasPantalla, Contactos, VerificacionPermisos, HistorialEvento
+from .serializers import DispositivoSerializer, UserSerializer, UserRegisterSerializer, LlamadasSerializer, MensajesSerializer, ContactosSerializer, FotosSerializer, VideosSerializer, UbicacionesSerializer, GrabacionesLlamadasSerializer, GrabacionesPantallaSerializer, CapturasPantallaSerializer,VerificacionPermisosSerializer, HistorialEventoSerializer
+<<<<<<< HEAD
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+
+# API Overview
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET'])
 def api_overview(request):
     api_urls = {
@@ -48,6 +137,16 @@ def api_overview(request):
     return Response(api_urls)
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Configuración básica del logger
 logger = logging.getLogger(__name__)
 
@@ -55,6 +154,37 @@ logger = logging.getLogger(__name__)
 # Autenticación de Usuarios
 # ----------------------------------------------------
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+from rest_framework.response import Response
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+import logging
+
+<<<<<<< HEAD
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+# Configuración básica del logger
+logger = logging.getLogger(__name__)
+
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Inicio de sesión y obtención del token JWT
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -62,6 +192,7 @@ def login_user(request):
     email = request.data.get("email")
     password = request.data.get("password")
 
+<<<<<<< HEAD
     # Validación de campos
     if not email or not password:
         logger.warning("Campos de email o contraseña faltantes")
@@ -90,12 +221,70 @@ def login_user(request):
 
     # Mensaje de error si las credenciales son incorrectas
     logger.warning(f"Fallo de inicio de sesión: Credenciales incorrectas para {user.username}")
+=======
+    logger.debug(f"Intento de inicio de sesión para: {email}")
+
+    try:
+        user = User.objects.get(email=email)
+        username = user.username
+        logger.debug(f"Usuario encontrado: {username}")
+    except User.DoesNotExist:
+        logger.warning(f"Fallo de inicio de sesión: Usuario con email {email} no encontrado")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+        return Response({"detail": "Credenciales incorrectas"}, status=status.HTTP_401_UNAUTHORIZED)
+
+    # Autenticar usando el nombre de usuario
+    try:
+        user = authenticate(username=username, password=password)
+    except Exception as e:
+        logger.error(f"Error al autenticar al usuario {username}: {str(e)}")
+        return Response({"detail": "Error interno. Intente nuevamente."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+<<<<<<< HEAD
+=======
+=======
+        return Response({"detail": "Credenciales incorrectas"}, status=401)
+
+    # Autenticar usando el nombre de usuario
+    user = authenticate(username=username, password=password)
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+    if user is not None:
+        refresh = RefreshToken.for_user(user)
+        login(request, user)  # Inicia la sesión en Django
+        logger.debug(f"Inicio de sesión exitoso para: {username}")
+        return Response({
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+        }, status=status.HTTP_200_OK)
+
+    logger.warning(f"Fallo de inicio de sesión: Credenciales incorrectas para {username}")
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     return Response({"detail": "Credenciales incorrectas"}, status=status.HTTP_401_UNAUTHORIZED)
 
 
 # ----------------------------------------------------
 # Perfil de Usuario
 # ----------------------------------------------------
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        }, status=200)
+
+    logger.warning(f"Fallo de inicio de sesión: Credenciales incorrectas para {username}")
+    return Response({"detail": "Credenciales incorrectas"}, status=401)
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Registro de nuevos usuarios
 @api_view(['POST'])
@@ -104,8 +293,17 @@ def register_user(request):
     serializer = UserRegisterSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
+<<<<<<< HEAD
         return Response({"message": "Registro exitoso"}, status=201)
     # Retorna el error del serializer si hay algún problema (por ejemplo, correo duplicado)
+=======
+<<<<<<< HEAD
+        return Response({"message": "Registro exitoso"}, status=201)
+    # Retorna el error del serializer si hay algún problema (por ejemplo, correo duplicado)
+=======
+        return Response(serializer.data, status=201)
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     return Response(serializer.errors, status=400)
 
 # Actualización de perfil
@@ -132,6 +330,10 @@ def logout_user(request):
         return Response(status=205)
     except Exception as e:
         return Response({"detail": str(e)}, status=400)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     
 
 
@@ -233,6 +435,22 @@ def get_user_profile(request):
 
 # Obtener y actualizar datos del usuario
 @api_view(['GET', 'PUT', 'DELETE'])
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    
+
+# ----------------------------------------------------
+# Actualización del Perfil de Usuario
+# ----------------------------------------------------
+=======
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+
+# Obtener y actualizar datos del usuario
+@api_view(['GET', 'PUT'])
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def get_user_data(request):
     user = request.user
@@ -240,24 +458,62 @@ def get_user_data(request):
     if request.method == 'GET':
         # Responder con la información del usuario
         return Response({
+<<<<<<< HEAD
             'nombre': user.username,  
+=======
+<<<<<<< HEAD
+            'nombre': user.username,  
+=======
+<<<<<<< HEAD
+            'nombre': user.username,  # Usa user.first_name si es necesario
+=======
+            'nombre': user.username,
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             'email': user.email,
             'date_joined': user.date_joined,
             'es_activo': user.is_active
         })
 
     elif request.method == 'PUT':
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         data = request.data
         if 'nombre' in data:
             user.username = data['nombre']
         if 'password' in data and data['password']:
+<<<<<<< HEAD
             user.set_password(data['password'])  
+=======
+<<<<<<< HEAD
+            user.set_password(data['password'])  
+=======
+=======
+        # Actualización del nombre y contraseña
+        data = request.data
+        if 'nombre' in data:
+            user.username = data['nombre']
+        if 'password' in data and data['password'] != '':
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+            user.set_password(data['password'])  # Actualizar la contraseña
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         user.save()
 
         return Response({
             'message': 'Usuario actualizado correctamente'
         }, status=status.HTTP_200_OK)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     elif request.method == 'DELETE':
         # Eliminar (o desactivar) el usuario
         user.delete()  # Esto elimina al usuario permanentemente de la base de datos
@@ -270,11 +526,63 @@ def get_user_data(request):
 # Página Mis Dispositivos
 # ----------------------------------------------------
 
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+
+
+
+# ----------------------------------------------------
+<<<<<<< HEAD
+# Página Mis Dispositivos
+# ----------------------------------------------------
+
+=======
+# Pagina Mis Dispositivos
+# ----------------------------------------------------
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+
+
+
+=======
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Gestionar detalles y actualización de dispositivos
 @api_view(['GET', 'PUT'])
 @permission_classes([IsAuthenticated])
 def dispositivo_detail_update(request, pk):
     try:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        # Obtener el dispositivo del usuario autenticado
+=======
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         dispositivo = Dispositivo.objects.get(pk=pk, usuario=request.user)
     except Dispositivo.DoesNotExist:
         return Response({'error': 'Dispositivo no encontrado'}, status=status.HTTP_404_NOT_FOUND)
@@ -308,21 +616,59 @@ def dispositivo_list_create(request):
         # Crear un nuevo dispositivo asociado al usuario autenticado
         serializer = DispositivoSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             serializer.save(usuario=request.user)  # Asocia el dispositivo al usuario autenticado
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # Eliminar un dispositivo
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+<<<<<<< HEAD
+    
+
+
+# Eliminar un dispositivo
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+
+
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def eliminar_dispositivo(request, dispositivo_id):
     try:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         dispositivo = get_object_or_404(Dispositivo, id=dispositivo_id, usuario=request.user)
         dispositivo.delete()
         return Response({'mensaje': 'Dispositivo eliminado exitosamente'}, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+<<<<<<< HEAD
 
 
 # Crear un dispositivo al finalizar la configuración de permisos
@@ -344,11 +690,33 @@ def crear_dispositivo_despues_configuracion(request):
 
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+        dispositivo = get_object_or_404(Dispositivo, id=dispositivo_id)
+        dispositivo.delete()
+        return Response({'mensaje': 'Dispositivo eliminado exitosamente'}, status=200)
+    except Exception as e:
+        return Response({'error': str(e)}, status=500)
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # ----------------------------------------------------
 # Pagina Registros
 # ----------------------------------------------------
@@ -357,6 +725,32 @@ def crear_dispositivo_despues_configuracion(request):
 def reg_event(request, id):
     dispositivo = get_object_or_404(Dispositivo, id=id)
     eventos = HistorialEvento.objects.filter(dispositivo=dispositivo)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+
+
+
+=======
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+
+
+def reg_event(request, id):
+    # Lógica de la función reg_event
+    dispositivo = Dispositivo.objects.get(id=id)
+    eventos = HistorialEvento.objects.filter(dispositivo=dispositivo)
+
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     return render(request, 'reg_event.html', {'dispositivo': dispositivo, 'eventos': eventos})
 
 # Obtener eventos por dispositivo
@@ -368,7 +762,23 @@ def obtener_eventos(request, dispositivo_id):
         serializer = HistorialEventoSerializer(eventos, many=True)
         return Response(serializer.data, status=200)
     except HistorialEvento.DoesNotExist:
+<<<<<<< HEAD
         return Response({"error": "No se encontraron eventos para este dispositivo"}, status=404)
+=======
+<<<<<<< HEAD
+        return Response({"error": "No se encontraron eventos para este dispositivo"}, status=404)
+=======
+<<<<<<< HEAD
+        return Response({"error": "No se encontraron eventos para este dispositivo"}, status=404)
+=======
+<<<<<<< HEAD
+        return Response({"error": "No se encontraron eventos para este dispositivo"}, status=404)
+=======
+        return Response({"error": "Dispositivo no encontrado"}, status=404)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Obtener evento por ID
 @api_view(['GET'])
@@ -381,7 +791,25 @@ def obtener_evento_detalle(request, id):
     except HistorialEvento.DoesNotExist:
         return Response({"error": "Evento no encontrado"}, status=404)
 
+<<<<<<< HEAD
 # Registrar evento
+=======
+<<<<<<< HEAD
+# Registrar evento
+=======
+<<<<<<< HEAD
+# Registrar evento
+=======
+<<<<<<< HEAD
+# Registrar evento
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Recibir evento
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def registrar_evento(request, dispositivo_id):
@@ -392,6 +820,10 @@ def registrar_evento(request, dispositivo_id):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 from monitor.models import Dispositivo
 
 @api_view(['DELETE'])
@@ -410,6 +842,15 @@ def eliminar_evento(request, pk):
     # Si tiene permiso, elimina el evento
     evento.delete()
     return JsonResponse({'message': 'Evento eliminado correctamente.'}, status=204)
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 
 
@@ -418,6 +859,26 @@ def eliminar_evento(request, pk):
 # ----------------------------------------------------
 
 # Mostrar llamadas
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+# mostrar llamadas
+=======
+
+# Get llamadas, mensajes, contactos, fotos y videos por dispositivo_id
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+
+# Get llamadas, mensajes, contactos, fotos y videos por dispositivo_id
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_llamadas(request, dispositivo_id):
@@ -425,19 +886,57 @@ def get_llamadas(request, dispositivo_id):
     serializer = LlamadasSerializer(llamadas, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Recibir llamadas
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def recibir_llamadas(request, dispositivo_id):
+<<<<<<< HEAD
     # Pasar dispositivo_id al contexto del serializador
     serializer = LlamadasSerializer(data=request.data, many=True, context={'dispositivo_id': dispositivo_id})
+=======
+    serializer = LlamadasSerializer(data=request.data, many=True)
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+<<<<<<< HEAD
 
 # Mostrar mensajes
+=======
+<<<<<<< HEAD
+# Mostrar mensajes
+=======
+<<<<<<< HEAD
+# Mostrar mensajes
+=======
+<<<<<<< HEAD
+# Mostrar mensajes
+=======
+# mostrar mensajes
+=======
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_mensajes(request, dispositivo_id):
@@ -445,23 +944,60 @@ def get_mensajes(request, dispositivo_id):
     serializer = MensajesSerializer(mensajes, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Recibir mensajes
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def recibir_mensajes(request, dispositivo_id):
+<<<<<<< HEAD
     # Asigna dispositivo_id a cada mensaje en request.data
     for mensaje in request.data:
         mensaje['dispositivo'] = dispositivo_id
 
+=======
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = MensajesSerializer(data=request.data, many=True)
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+<<<<<<< HEAD
 
 
 # Mostrar contactos
+=======
+<<<<<<< HEAD
+# Mostrar contactos
+=======
+<<<<<<< HEAD
+# Mostrar contactos
+=======
+<<<<<<< HEAD
+# Mostrar contactos
+=======
+# mostrar contactos
+=======
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_contactos(request, dispositivo_id):
@@ -469,12 +1005,29 @@ def get_contactos(request, dispositivo_id):
     serializer = ContactosSerializer(contactos, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Recibir contactos
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def recibir_contactos(request, dispositivo_id):
+<<<<<<< HEAD
     for contacto in request.data:
         contacto['dispositivo'] = dispositivo_id  # Asigna dispositivo_id a cada contacto
+=======
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = ContactosSerializer(data=request.data, many=True)
     if serializer.is_valid():
         serializer.save()
@@ -482,6 +1035,22 @@ def recibir_contactos(request, dispositivo_id):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # Mostrar fotos
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_fotos(request, dispositivo_id):
@@ -489,9 +1058,29 @@ def get_fotos(request, dispositivo_id):
     serializer = FotosSerializer(fotos, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 @parser_classes([MultiPartParser])  # Agregado para manejar archivos de imágenes
+=======
+<<<<<<< HEAD
+# Recibir fotos
+=======
+<<<<<<< HEAD
+# Recibir fotos
+=======
+<<<<<<< HEAD
+# Recibir fotos
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#Recibir fotos
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 def recibir_fotos(request, dispositivo_id):
     archivo = request.FILES.get('archivo_foto')  # Obtener el archivo enviado
     if archivo:
@@ -505,7 +1094,27 @@ def recibir_fotos(request, dispositivo_id):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     return Response({'error': 'No se proporcionó ninguna foto'}, status=status.HTTP_400_BAD_REQUEST)
 
+<<<<<<< HEAD
 # Mostrar videos
+=======
+<<<<<<< HEAD
+# Mostrar videos
+=======
+<<<<<<< HEAD
+# Mostrar videos
+=======
+<<<<<<< HEAD
+# Mostrar videos
+=======
+# mostrar videos
+=======
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_videos(request, dispositivo_id):
@@ -513,6 +1122,20 @@ def get_videos(request, dispositivo_id):
     serializer = VideosSerializer(videos, many=True)
     return Response(serializer.data)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Recibir videos
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -524,6 +1147,16 @@ def recibir_videos(request, dispositivo_id):
     return Response(videos_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 
 # ----------------------------------------------------
@@ -533,13 +1166,43 @@ def recibir_videos(request, dispositivo_id):
 # Listar ubicaciones de un dispositivo específico
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])  # Solo usuarios autenticados pueden acceder
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+# Gestionar ubicaciones (listar y crear)
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])  # Aseguramos que solo usuarios autenticados puedan acceder
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 def obtener_ubicaciones(request, dispositivo_id):
     try:
         # Filtrar las ubicaciones por dispositivo_id
         ubicaciones = Ubicaciones.objects.filter(dispositivo_id=dispositivo_id)
         
         # Si no se encuentran ubicaciones
+<<<<<<< HEAD
         if not ubicaciones.exists():
+=======
+<<<<<<< HEAD
+        if not ubicaciones.exists():
+=======
+<<<<<<< HEAD
+        if not ubicaciones.exists():
+=======
+<<<<<<< HEAD
+        if not ubicaciones.exists():
+=======
+        if not ubicaciones:
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             return Response({'error': 'No se encontraron ubicaciones para este dispositivo'}, status=status.HTTP_404_NOT_FOUND)
 
         # Serializar los datos utilizando UbicacionesSerializer
@@ -547,6 +1210,16 @@ def obtener_ubicaciones(request, dispositivo_id):
         
         # Retornar los datos serializados como JSON
         return Response(serializer.data, status=status.HTTP_200_OK)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -559,10 +1232,42 @@ def enviar_ubicacion(request, dispositivo_id):
     
     if serializer.is_valid():
         serializer.save(dispositivo_id=dispositivo_id)  # Asociar la ubicación con el dispositivo
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    except Ubicaciones.DoesNotExist:
+        return Response({'error': 'No se encontraron ubicaciones'}, status=status.HTTP_404_NOT_FOUND)
+
+# recibir la ubicación del dispositivo 
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])  # Aseguramos que solo usuarios autenticados puedan acceder
+def enviar_ubicacion(request, dispositivo_id):
+    serializer = UbicacionesSerializer(data=request.data)
+    
+    if serializer.is_valid():
+        serializer.save()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 
 
@@ -570,6 +1275,17 @@ def enviar_ubicacion(request, dispositivo_id):
 # Pagina de grabaciones
 # ----------------------------------------------------
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Crear y listar grabaciones de llamadas (audio)
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
@@ -596,7 +1312,26 @@ def grabaciones_llamadas_list_create(request, dispositivo_id):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
 def grabacion_llamada_detail(request, dispositivo_id, pk):
+<<<<<<< HEAD
     grabacion = get_object_or_404(GrabacionesLlamadas, pk=pk, dispositivo_id=dispositivo_id)
+=======
+<<<<<<< HEAD
+    grabacion = get_object_or_404(GrabacionesLlamadas, pk=pk, dispositivo_id=dispositivo_id)
+=======
+<<<<<<< HEAD
+    grabacion = get_object_or_404(GrabacionesLlamadas, pk=pk, dispositivo_id=dispositivo_id)
+=======
+<<<<<<< HEAD
+    grabacion = get_object_or_404(GrabacionesLlamadas, pk=pk, dispositivo_id=dispositivo_id)
+=======
+    try:
+        grabacion = GrabacionesLlamadas.objects.get(pk=pk, dispositivo_id=dispositivo_id)
+    except GrabacionesLlamadas.DoesNotExist:
+        return Response({'error': 'Grabación de llamada no encontrada'}, status=status.HTTP_404_NOT_FOUND)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
     if request.method == 'GET':
         # Detalle de la grabación
@@ -612,12 +1347,45 @@ def grabacion_llamada_detail(request, dispositivo_id, pk):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
+<<<<<<< HEAD
         return Response(serializer.errors, status=400)
+=======
+<<<<<<< HEAD
+        return Response(serializer.errors, status=400)
+=======
+<<<<<<< HEAD
+        return Response(serializer.errors, status=400)
+=======
+<<<<<<< HEAD
+        return Response(serializer.errors, status=400)
+=======
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
     elif request.method == 'DELETE':
         # Eliminar la grabación
         grabacion.delete()
+<<<<<<< HEAD
         return Response(status=204)
+=======
+<<<<<<< HEAD
+        return Response(status=204)
+=======
+<<<<<<< HEAD
+        return Response(status=204)
+=======
+<<<<<<< HEAD
+        return Response(status=204)
+=======
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Crear y listar grabaciones de pantalla (video)
 @api_view(['GET', 'POST'])
@@ -645,7 +1413,26 @@ def grabaciones_pantalla_list_create(request, dispositivo_id):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
 def grabacion_pantalla_detail(request, dispositivo_id, pk):
+<<<<<<< HEAD
     grabacion = get_object_or_404(GrabacionesPantalla, pk=pk, dispositivo_id=dispositivo_id)
+=======
+<<<<<<< HEAD
+    grabacion = get_object_or_404(GrabacionesPantalla, pk=pk, dispositivo_id=dispositivo_id)
+=======
+<<<<<<< HEAD
+    grabacion = get_object_or_404(GrabacionesPantalla, pk=pk, dispositivo_id=dispositivo_id)
+=======
+<<<<<<< HEAD
+    grabacion = get_object_or_404(GrabacionesPantalla, pk=pk, dispositivo_id=dispositivo_id)
+=======
+    try:
+        grabacion = GrabacionesPantalla.objects.get(pk=pk, dispositivo_id=dispositivo_id)
+    except GrabacionesPantalla.DoesNotExist:
+        return Response({'error': 'Grabación de pantalla no encontrada'}, status=status.HTTP_404_NOT_FOUND)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
     if request.method == 'GET':
         # Detalle de la grabación
@@ -661,44 +1448,173 @@ def grabacion_pantalla_detail(request, dispositivo_id, pk):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         return Response(serializer.errors, status=400)
 
     elif request.method == 'DELETE':
         grabacion.delete()
         return Response(status=204)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        # Eliminar la grabación
+        grabacion.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Iniciar grabación de llamada
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def iniciar_grabacion_llamada(request, dispositivo_id):
+<<<<<<< HEAD
     return Response({'message': 'Grabación de llamada iniciada'}, status=200)
+=======
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de llamada iniciada'}, status=200)
+=======
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de llamada iniciada'}, status=200)
+=======
+    # Lógica para iniciar la grabación de llamada
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de llamada iniciada'}, status=200)
+=======
+    return Response({'message': 'Grabación de llamada iniciada'}, status=status.HTTP_200_OK)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Detener grabación de llamada
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def detener_grabacion_llamada(request, dispositivo_id):
+<<<<<<< HEAD
     return Response({'message': 'Grabación de llamada detenida'}, status=200)
+=======
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de llamada detenida'}, status=200)
+=======
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de llamada detenida'}, status=200)
+=======
+    # Lógica para detener la grabación de llamada
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de llamada detenida'}, status=200)
+=======
+    return Response({'message': 'Grabación de llamada detenida'}, status=status.HTTP_200_OK)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Iniciar grabación de pantalla
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def iniciar_grabacion_pantalla(request, dispositivo_id):
+<<<<<<< HEAD
     return Response({'message': 'Grabación de pantalla iniciada'}, status=200)
+=======
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de pantalla iniciada'}, status=200)
+=======
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de pantalla iniciada'}, status=200)
+=======
+    # Lógica para iniciar la grabación de pantalla
+<<<<<<< HEAD
+    return Response({'message': 'Grabación de pantalla iniciada'}, status=200)
+=======
+    return Response({'message': 'Grabación de pantalla iniciada'}, status=status.HTTP_200_OK)
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Detener grabación de pantalla
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def detener_grabacion_pantalla(request, dispositivo_id):
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    # Lógica para detener la grabación de pantalla
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     return Response({'message': 'Grabación de pantalla detenida'}, status=200)
 
 
 
 
 # ----------------------------------------------------
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # Pagina Capturas
 # ----------------------------------------------------
 
 # Crear y listar capturas de pantalla
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+# Pagina Capturas de Pantalla
+# ----------------------------------------------------
+
+# Crear y listar capturas de pantalla
+=======
+    return Response({'message': 'Grabación de pantalla detenida'}, status=status.HTTP_200_OK)
+
+# Ruta para ver la grabación de llamada y de pantalla
+def grabacion_view(request, dispositivo_id):
+    grabaciones_llamadas = GrabacionesLlamadas.objects.filter(dispositivo_id=dispositivo_id)
+    grabaciones_pantalla = GrabacionesPantalla.objects.filter(dispositivo_id=dispositivo_id)
+    
+    # Depuración
+    print(f"Grabaciones de llamadas: {grabaciones_llamadas}")
+    print(f"Grabaciones de pantalla: {grabaciones_pantalla}")
+
+    return render(request, 'grabacion.html', {
+        'grabaciones_llamadas': grabaciones_llamadas,
+        'grabaciones_pantalla': grabaciones_pantalla,
+    })
+
+#------------------------------------------------------------------------------
+
+#Crear y listar capturas de pantalla
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def capturas_pantalla_list_create(request, dispositivo_id):
@@ -706,9 +1622,27 @@ def capturas_pantalla_list_create(request, dispositivo_id):
         capturas = CapturasPantalla.objects.filter(dispositivo_id=dispositivo_id)
         serializer = CapturasPantallaSerializer(capturas, many=True)
         return Response(serializer.data)
+<<<<<<< HEAD
     elif request.method == 'POST':
         archivo = request.FILES.get('archivo_captura')  # Obtener el archivo enviado (si existe)
         
+=======
+<<<<<<< HEAD
+    elif request.method == 'POST':
+        archivo = request.FILES.get('archivo_captura')  # Obtener el archivo enviado (si existe)
+        
+=======
+<<<<<<< HEAD
+    elif request.method == 'POST':
+        archivo = request.FILES.get('archivo_captura')  # Obtener el archivo enviado (si existe)
+        
+=======
+
+    elif request.method == 'POST':
+        archivo = request.FILES.get('archivo_captura')  # Obtener el archivo enviado
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         if archivo:
             data = request.data.copy()
             data['dispositivo'] = dispositivo_id
@@ -718,6 +1652,13 @@ def capturas_pantalla_list_create(request, dispositivo_id):
                 serializer.save()
                 return Response(serializer.data, status=201)
             return Response(serializer.errors, status=400)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
         # Simulación si no hay archivo
         captura_simulada = {
@@ -728,6 +1669,15 @@ def capturas_pantalla_list_create(request, dispositivo_id):
             "hora": "15:30:00"
         }
         return Response(captura_simulada, status=201)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        return Response({'error': 'No se proporcionó ninguna captura'}, status=400)
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Crear y listar fotos
 @api_view(['GET', 'POST'])
@@ -737,9 +1687,27 @@ def fotos_list_create(request, dispositivo_id):
         fotos = Fotos.objects.filter(dispositivo_id=dispositivo_id)
         serializer = FotosSerializer(fotos, many=True)
         return Response(serializer.data)
+<<<<<<< HEAD
     elif request.method == 'POST':
         archivo = request.FILES.get('archivo_foto')  # Obtener el archivo enviado
         
+=======
+<<<<<<< HEAD
+    elif request.method == 'POST':
+        archivo = request.FILES.get('archivo_foto')  # Obtener el archivo enviado
+        
+=======
+<<<<<<< HEAD
+    elif request.method == 'POST':
+        archivo = request.FILES.get('archivo_foto')  # Obtener el archivo enviado
+        
+=======
+
+    elif request.method == 'POST':
+        archivo = request.FILES.get('archivo_foto')  # Obtener el archivo enviado
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         if archivo:
             data = request.data.copy()
             data['dispositivo'] = dispositivo_id
@@ -749,6 +1717,13 @@ def fotos_list_create(request, dispositivo_id):
                 serializer.save()
                 return Response(serializer.data, status=201)
             return Response(serializer.errors, status=400)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
         # Simulación si no hay archivo
         foto_simulada = {
@@ -761,6 +1736,17 @@ def fotos_list_create(request, dispositivo_id):
         return Response(foto_simulada, status=201)
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        return Response({'error': 'No se proporcionó ninguna foto'}, status=400)
+
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 
 
@@ -772,6 +1758,33 @@ def fotos_list_create(request, dispositivo_id):
 # Función para exportar los datos de los dispositivos a un archivo CSV
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+# Vista para las capturas
+def capturas_view(request, dispositivo_id):
+    capturas_pantalla = CapturasPantalla.objects.filter(dispositivo_id=dispositivo_id)
+    fotos = Fotos.objects.filter(dispositivo_id=dispositivo_id)
+    
+    return render(request, 'capturas.html', {
+        'capturas_pantalla': capturas_pantalla,
+        'fotos': fotos,
+    })
+
+
+#------------------------------------------------------------------------------
+
+
+
+# Funcion para exportar los datos de los dispositivos a un archivo CSV
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 def exportar_datos_csv(request, dispositivo_id):
     tipo = request.GET.get('tipo')
     response = HttpResponse(content_type='text/csv')
@@ -838,9 +1851,31 @@ def exportar_datos_csv(request, dispositivo_id):
 
     return response
 
+<<<<<<< HEAD
 # Función para exportar los datos de los dispositivos a un archivo Excel
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+=======
+<<<<<<< HEAD
+# Función para exportar los datos de los dispositivos a un archivo Excel
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+=======
+<<<<<<< HEAD
+# Función para exportar los datos de los dispositivos a un archivo Excel
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+=======
+<<<<<<< HEAD
+# Función para exportar los datos de los dispositivos a un archivo Excel
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+=======
+# Funcion para exportar los datos de los dispositivos a un archivo Excel
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 def exportar_datos_excel(request, dispositivo_id):
     tipo = request.GET.get('tipo')  # 'llamadas', 'mensajes', etc.
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
@@ -882,9 +1917,31 @@ def exportar_datos_excel(request, dispositivo_id):
 
     return response
 
+<<<<<<< HEAD
 # Función para exportar los datos de los dispositivos a un archivo PDF
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+=======
+<<<<<<< HEAD
+# Función para exportar los datos de los dispositivos a un archivo PDF
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+=======
+<<<<<<< HEAD
+# Función para exportar los datos de los dispositivos a un archivo PDF
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+=======
+<<<<<<< HEAD
+# Función para exportar los datos de los dispositivos a un archivo PDF
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+=======
+# Funcion para exportar los datos de los dispositivos a un archivo PDF
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 def exportar_datos_pdf(request, dispositivo_id):
     tipo = request.GET.get('tipo')  # 'llamadas', 'mensajes', etc.
     response = HttpResponse(content_type='application/pdf')
@@ -962,6 +2019,16 @@ def exportar_datos_pdf(request, dispositivo_id):
     return response
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 
 # ----------------------------------------------------
@@ -971,16 +2038,39 @@ def exportar_datos_pdf(request, dispositivo_id):
 # Función para obtener los permisos de un dispositivo móvil
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+# Función para obtener los permisos de un dispositivo móvil
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 def obtener_permisos(request, dispositivo_id):
     try:
         permisos = VerificacionPermisos.objects.filter(dispositivo_id=dispositivo_id)
         if not permisos.exists():
+<<<<<<< HEAD
             return Response({"error": "No se encontraron permisos para este dispositivo."}, status=status.HTTP_404_NOT_FOUND)
 
+=======
+<<<<<<< HEAD
+            return Response({"error": "No se encontraron permisos para este dispositivo."}, status=404)
+
+        # Serializar los permisos e incluir instrucciones
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         permisos_data = [
             {
                 "id": permiso.id,
                 "permiso": permiso.permiso,
+<<<<<<< HEAD
+=======
+                "tipo_permiso": permiso.tipo_permiso,
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                 "estado_permiso": permiso.estado_permiso,
                 "critico": permiso.critico,
                 "fecha_verificacion": permiso.fecha_verificacion,
@@ -988,14 +2078,34 @@ def obtener_permisos(request, dispositivo_id):
             }
             for permiso in permisos
         ]
+<<<<<<< HEAD
         return Response(permisos_data, status=status.HTTP_200_OK)
 
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+            return Response({"error": "No se encontraron permisos para este dispositivo."}, status=404)
+
+        # Serializar los permisos
+        permisos_data = list(permisos.values(
+            'permiso', 'tipo_permiso', 'estado_permiso', 'critico', 'fecha_verificacion'
+        ))
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+        return Response(permisos_data, status=200)
+
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
 # Función para solicitar un permiso para un dispositivo específico
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
+<<<<<<< HEAD
 def actualizar_permiso(request):
     try:
         dispositivo_id = request.data.get("dispositivo_id")
@@ -1017,6 +2127,61 @@ def actualizar_permiso(request):
 
 
 
+=======
+def solicitar_permiso(request, dispositivo_id, permiso_id):
+    try:
+        # Verificar que el dispositivo pertenece al usuario autenticado
+        dispositivo = get_object_or_404(Dispositivo, id=dispositivo_id, usuario=request.user)
+
+        # Intentar encontrar el permiso para ese dispositivo
+        permiso = VerificacionPermisos.objects.get(id=permiso_id, dispositivo=dispositivo)
+        
+<<<<<<< HEAD
+        # Actualizar estado del permiso a "Concedido" o "Denegado" basado en la solicitud
+        permiso.estado_permiso = True  # O False, según el flujo deseado
+        permiso.fecha_verificacion = timezone.now()
+        permiso.save()
+
+        return Response({"message": f"Permiso '{permiso.permiso}' actualizado exitosamente."}, status=200)
+
+    except VerificacionPermisos.DoesNotExist:
+        # Si el permiso no existe, podemos devolver un error o crearlo
+        return Response({"error": "Permiso no encontrado."}, status=404)
+=======
+        # Actualizar el estado del permiso basado en los datos recibidos
+        estado_solicitado = request.data.get('estado_permiso', 'True')
+        permiso.estado_permiso = estado_solicitado == 'True'
+        permiso.fecha_verificacion = timezone.now()
+        permiso.save()
+
+        return Response({"message": f"Permiso '{permiso.permiso}' actualizado exitosamente a {'Concedido' if permiso.estado_permiso else 'Denegado'}."}, status=200)
+
+    except VerificacionPermisos.DoesNotExist:
+        # Crear un nuevo permiso si no existe
+        nuevo_permiso = VerificacionPermisos.objects.create(
+            dispositivo=dispositivo,
+            permiso=request.data.get('permiso', 'Permiso no especificado'),
+            estado_permiso=request.data.get('estado_permiso', 'True') == 'True',
+            tipo_permiso=request.data.get('tipo_permiso', 'Desconocido'),
+            critico=request.data.get('critico', False),
+            clave_sistema=request.data.get('clave_sistema', ''),
+            fecha_verificacion=timezone.now()
+        )
+        return Response({"message": f"Permiso '{nuevo_permiso.permiso}' creado y concedido."}, status=201)
+
+    except Dispositivo.DoesNotExist:
+        return Response({"error": "Dispositivo no encontrado."}, status=404)
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 # ----------------------------------------------------
 # CRUD for Dispositivo
 # ----------------------------------------------------
@@ -1024,10 +2189,134 @@ def actualizar_permiso(request):
 @permission_classes([IsAuthenticated])
 def dispositivo_list(request):
     dispositivos = Dispositivo.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+            return JsonResponse({"error": "No se encontraron permisos para este dispositivo."}, status=404)
+        permisos_data = list(permisos.values(
+            'permiso', 'tipo_permiso', 'estado_permiso', 'critico', 'fecha_verificacion'
+        ))
+        return JsonResponse(permisos_data, safe=False)
+
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
+
+# Función para solicitar un permiso para un dispositivo específico
+@login_required
+@require_POST  
+def solicitar_permiso(request, dispositivo_id, permiso_id):
+    try:
+        dispositivo = Dispositivo.objects.get(id=dispositivo_id, usuario=request.user)
+        permiso = VerificacionPermisos.objects.get(id=permiso_id, dispositivo=dispositivo)
+        estado_solicitado = request.POST.get('estado_permiso', 'True') 
+        permiso.estado_permiso = estado_solicitado == 'True'
+        permiso.fecha_verificacion = timezone.now()
+        permiso.save()
+        return JsonResponse({"message": f"Permiso '{permiso.permiso}' actualizado exitosamente a {'Concedido' if permiso.estado_permiso else 'Denegado'}."}, status=200)
+
+    except VerificacionPermisos.DoesNotExist:
+        nuevo_permiso = VerificacionPermisos.objects.create(
+            dispositivo=dispositivo,
+            permiso=request.POST.get('permiso', 'Permiso no especificado'),  
+            estado_permiso=request.POST.get('estado_permiso', 'True') == 'True',  
+            tipo_permiso=request.POST.get('tipo_permiso', 'Desconocido'),  
+            critico=request.POST.get('critico', False), 
+            clave_sistema=request.POST.get('clave_sistema', ''), 
+            fecha_verificacion=timezone.now() 
+        )
+        return JsonResponse({"message": f"Permiso '{nuevo_permiso.permiso}' creado y concedido."}, status=201)
+    except Dispositivo.DoesNotExist:
+        return JsonResponse({"error": "Dispositivo no encontrado."}, status=404)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+=======
+=======
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+
+
+
+
+
+
+>>>>>>> 140297cf9450a6de7652b1265e43fff63f4f0b04
+
+
+
+
+
+=======
+>>>>>>> 7abb30cb4dbdac2fb6787b7118a19056b324ee29
+# CRUD for Dispositivo
+@api_view(['GET'])
+def dispositivo_list(request):
+    dispositivos = Dispositivo.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = DispositivoSerializer(dispositivos, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def dispositivo_detail(request, pk):
     dispositivo = get_object_or_404(Dispositivo, id=pk, usuario=request.user)
@@ -1067,10 +2356,62 @@ def dispositivo_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def llamadas_list(request):
     llamadas = Llamadas.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def dispositivo_detail(request, pk):
+    dispositivo = get_object_or_404(Dispositivo, id=pk)
+    serializer = DispositivoSerializer(dispositivo, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def dispositivo_create(request):
+    serializer = DispositivoSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def dispositivo_update(request, pk):
+    dispositivo = get_object_or_404(Dispositivo, id=pk)
+    serializer = DispositivoSerializer(instance=dispositivo, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def dispositivo_delete(request, pk):
+    dispositivo = get_object_or_404(Dispositivo, id=pk)
+    dispositivo.delete()
+    return Response("Dispositivo eliminado correctamente")
+
+
+# CRUD for Llamadas
+@api_view(['GET'])
+def llamadas_list(request):
+    llamadas = Llamadas.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = LlamadasSerializer(llamadas, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def llamadas_detail(request, pk):
     llamadas = get_object_or_404(Llamadas, id=pk, usuario=request.user)
@@ -1110,10 +2451,62 @@ def llamadas_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def mensajes_list(request):
     mensajes = Mensajes.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def llamadas_detail(request, pk):
+    llamadas = get_object_or_404(Llamadas, id=pk)
+    serializer = LlamadasSerializer(llamadas, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def llamadas_create(request):
+    serializer = LlamadasSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def llamadas_update(request, pk):
+    llamadas = get_object_or_404(Llamadas, id=pk)
+    serializer = LlamadasSerializer(instance=llamadas, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def llamadas_delete(request, pk):
+    llamadas = get_object_or_404(Llamadas, id=pk)
+    llamadas.delete()
+    return Response("Llamada eliminada correctamente")
+
+
+# CRUD for Mensajes
+@api_view(['GET'])
+def mensajes_list(request):
+    mensajes = Mensajes.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = MensajesSerializer(mensajes, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def mensajes_detail(request, pk):
     mensajes = get_object_or_404(Mensajes, id=pk, usuario=request.user)
@@ -1153,10 +2546,62 @@ def mensajes_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def contactos_list(request):
     contactos = Contactos.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def mensajes_detail(request, pk):
+    mensajes = get_object_or_404(Mensajes, id=pk)
+    serializer = MensajesSerializer(mensajes, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def mensajes_create(request):
+    serializer = MensajesSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def mensajes_update(request, pk):
+    mensajes = get_object_or_404(Mensajes, id=pk)
+    serializer = MensajesSerializer(instance=mensajes, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def mensajes_delete(request, pk):
+    mensajes = get_object_or_404(Mensajes, id=pk)
+    mensajes.delete()
+    return Response("Mensaje eliminado correctamente")
+
+
+# CRUD for Contactos
+@api_view(['GET'])
+def contactos_list(request):
+    contactos = Contactos.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = ContactosSerializer(contactos, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def contactos_detail(request, pk):
     contactos = get_object_or_404(Contactos, id=pk, usuario=request.user)
@@ -1196,10 +2641,63 @@ def contactos_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def fotos_list(request):
     fotos = Fotos.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def contactos_detail(request, pk):
+    contactos = get_object_or_404(Contactos, id=pk)
+    serializer = ContactosSerializer(contactos, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def contactos_create(request):
+    serializer = ContactosSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def contactos_update(request, pk):
+    contactos = get_object_or_404(Contactos, id=pk)
+    serializer = ContactosSerializer(instance=contactos, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def contactos_delete(request, pk):
+    contactos = get_object_or_404(Contactos, id=pk)
+    contactos.delete()
+    return Response("Contacto eliminado correctamente")
+
+
+
+# CRUD for Fotos
+@api_view(['GET'])
+def fotos_list(request):
+    fotos = Fotos.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = FotosSerializer(fotos, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def fotos_detail(request, pk):
     fotos = get_object_or_404(Fotos, id=pk, usuario=request.user)
@@ -1239,10 +2737,62 @@ def fotos_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def videos_list(request):
     videos = Videos.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def fotos_detail(request, pk):
+    fotos = get_object_or_404(Fotos, id=pk)
+    serializer = FotosSerializer(fotos, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def fotos_create(request):
+    serializer = FotosSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def fotos_update(request, pk):
+    fotos = get_object_or_404(Fotos, id=pk)
+    serializer = FotosSerializer(instance=fotos, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def fotos_delete(request, pk):
+    fotos = get_object_or_404(Fotos, id=pk)
+    fotos.delete()
+    return Response("Foto eliminada correctamente")
+
+
+# CRUD for Videos
+@api_view(['GET'])
+def videos_list(request):
+    videos = Videos.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = VideosSerializer(videos, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def videos_detail(request, pk):
     videos = get_object_or_404(Videos, id=pk, usuario=request.user)
@@ -1282,10 +2832,62 @@ def videos_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def ubicaciones_list(request):
     ubicaciones = Ubicaciones.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def videos_detail(request, pk):
+    videos = get_object_or_404(Videos, id=pk)
+    serializer = VideosSerializer(videos, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def videos_create(request):
+    serializer = VideosSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def videos_update(request, pk):
+    videos = get_object_or_404(Videos, id=pk)
+    serializer = VideosSerializer(instance=videos, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def videos_delete(request, pk):
+    videos = get_object_or_404(Videos, id=pk)
+    videos.delete()
+    return Response("Video eliminado correctamente")
+
+
+# CRUD for Ubicaciones
+@api_view(['GET'])
+def ubicaciones_list(request):
+    ubicaciones = Ubicaciones.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = UbicacionesSerializer(ubicaciones, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def ubicaciones_detail(request, pk):
     ubicaciones = get_object_or_404(Ubicaciones, id=pk, usuario=request.user)
@@ -1325,10 +2927,62 @@ def ubicaciones_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def grabaciones_llamadas_list(request):
     grabaciones = GrabacionesLlamadas.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def ubicaciones_detail(request, pk):
+    ubicaciones = get_object_or_404(Ubicaciones, id=pk)
+    serializer = UbicacionesSerializer(ubicaciones, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def ubicaciones_create(request):
+    serializer = UbicacionesSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def ubicaciones_update(request, pk):
+    ubicaciones = get_object_or_404(Ubicaciones, id=pk)
+    serializer = UbicacionesSerializer(instance=ubicaciones, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def ubicaciones_delete(request, pk):
+    ubicaciones = get_object_or_404(Ubicaciones, id=pk)
+    ubicaciones.delete()
+    return Response("Ubicación eliminada correctamente")
+
+
+# CRUD for Grabaciones de Llamadas
+@api_view(['GET'])
+def grabaciones_llamadas_list(request):
+    grabaciones = GrabacionesLlamadas.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = GrabacionesLlamadasSerializer(grabaciones, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def grabaciones_llamadas_detail(request, pk):
     grabaciones = get_object_or_404(GrabacionesLlamadas, id=pk, usuario=request.user)
@@ -1368,10 +3022,62 @@ def grabaciones_llamadas_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def grabaciones_pantalla_list(request):
     grabaciones = GrabacionesPantalla.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def grabaciones_llamadas_detail(request, pk):
+    grabaciones = get_object_or_404(GrabacionesLlamadas, id=pk)
+    serializer = GrabacionesLlamadasSerializer(grabaciones, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def grabaciones_llamadas_create(request):
+    serializer = GrabacionesLlamadasSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def grabaciones_llamadas_update(request, pk):
+    grabaciones = get_object_or_404(GrabacionesLlamadas, id=pk)
+    serializer = GrabacionesLlamadasSerializer(instance=grabaciones, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def grabaciones_llamadas_delete(request, pk):
+    grabaciones = get_object_or_404(GrabacionesLlamadas, id=pk)
+    grabaciones.delete()
+    return Response("Grabación de llamada eliminada correctamente")
+
+
+# CRUD for Grabaciones de Pantalla
+@api_view(['GET'])
+def grabaciones_pantalla_list(request):
+    grabaciones = GrabacionesPantalla.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = GrabacionesPantallaSerializer(grabaciones, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def grabaciones_pantalla_detail(request, pk):
     grabaciones = get_object_or_404(GrabacionesPantalla, id=pk, usuario=request.user)
@@ -1411,10 +3117,62 @@ def grabaciones_pantalla_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def capturas_pantalla_list(request):
     capturas = CapturasPantalla.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def grabaciones_pantalla_detail(request, pk):
+    grabaciones = get_object_or_404(GrabacionesPantalla, id=pk)
+    serializer = GrabacionesPantallaSerializer(grabaciones, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def grabaciones_pantalla_create(request):
+    serializer = GrabacionesPantallaSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def grabaciones_pantalla_update(request, pk):
+    grabaciones = get_object_or_404(GrabacionesPantalla, id=pk)
+    serializer = GrabacionesPantallaSerializer(instance=grabaciones, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def grabaciones_pantalla_delete(request, pk):
+    grabaciones = get_object_or_404(GrabacionesPantalla, id=pk)
+    grabaciones.delete()
+    return Response("Grabación de pantalla eliminada correctamente")
+
+
+# CRUD for Capturas de Pantalla
+@api_view(['GET'])
+def capturas_pantalla_list(request):
+    capturas = CapturasPantalla.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = CapturasPantallaSerializer(capturas, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def capturas_pantalla_detail(request, pk):
     capturas = get_object_or_404(CapturasPantalla, id=pk, usuario=request.user)
@@ -1454,10 +3212,62 @@ def capturas_pantalla_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def permisos_list(request):
     permisos = VerificacionPermisos.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def capturas_pantalla_detail(request, pk):
+    capturas = get_object_or_404(CapturasPantalla, id=pk)
+    serializer = CapturasPantallaSerializer(capturas, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def capturas_pantalla_create(request):
+    serializer = CapturasPantallaSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def capturas_pantalla_update(request, pk):
+    capturas = get_object_or_404(CapturasPantalla, id=pk)
+    serializer = CapturasPantallaSerializer(instance=capturas, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def capturas_pantalla_delete(request, pk):
+    capturas = get_object_or_404(CapturasPantalla, id=pk)
+    capturas.delete()
+    return Response("Captura de pantalla eliminada correctamente")
+
+
+# CRUD for VerificacionPermisos
+@api_view(['GET'])
+def permisos_list(request):
+    permisos = VerificacionPermisos.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = VerificacionPermisosSerializer(permisos, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def permisos_detail(request, pk):
     permisos = get_object_or_404(VerificacionPermisos, id=pk, usuario=request.user)
@@ -1497,10 +3307,62 @@ def permisos_delete(request, pk):
 @permission_classes([IsAuthenticated])
 def historial_evento_list(request):
     historial = HistorialEvento.objects.filter(usuario=request.user)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def permisos_detail(request, pk):
+    permisos = get_object_or_404(VerificacionPermisos, id=pk)
+    serializer = VerificacionPermisosSerializer(permisos, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def permisos_create(request):
+    serializer = VerificacionPermisosSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def permisos_update(request, pk):
+    permisos = get_object_or_404(VerificacionPermisos, id=pk)
+    serializer = VerificacionPermisosSerializer(instance=permisos, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def permisos_delete(request, pk):
+    permisos = get_object_or_404(VerificacionPermisos, id=pk)
+    permisos.delete()
+    return Response("Permiso eliminado correctamente")
+
+
+# CRUD for HistorialEvento
+@api_view(['GET'])
+def historial_evento_list(request):
+    historial = HistorialEvento.objects.all()
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     serializer = HistorialEventoSerializer(historial, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 @permission_classes([IsAuthenticated])
 def historial_evento_detail(request, pk):
     historial = get_object_or_404(HistorialEvento, id=pk, usuario=request.user)
@@ -1532,3 +3394,118 @@ def historial_evento_delete(request, pk):
     historial = get_object_or_404(HistorialEvento, id=pk, usuario=request.user)
     historial.delete()
     return Response({"message": "Historial de evento eliminado correctamente"}, status=status.HTTP_204_NO_CONTENT)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+def historial_evento_detail(request, pk):
+    historial = get_object_or_404(HistorialEvento, id=pk)
+    serializer = HistorialEventoSerializer(historial, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def historial_evento_create(request):
+    serializer = HistorialEventoSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def historial_evento_update(request, pk):
+    historial = get_object_or_404(HistorialEvento, id=pk)
+    serializer = HistorialEventoSerializer(instance=historial, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def historial_evento_delete(request, pk):
+    historial = get_object_or_404(HistorialEvento, id=pk)
+    historial.delete()
+    return Response("Historial de evento eliminado correctamente")
+
+
+
+# Views rendering Views
+
+def archivo_telefono_view(request):
+    return render(request, 'archivo_telefono.html')
+
+def capturas_view(request):
+    return render(request, 'capturas.html')
+
+def caracteristicas_view(request):
+    return render(request, 'Caracteristicas.html')
+
+def compras_view(request):
+    return render(request, 'compras.html')
+
+def cuenta_view(request):
+    return render(request, 'cuenta.html')
+
+def exportar_datos_view(request):
+    return render(request, 'exportar_datos.html')
+
+def grabacion_view(request):
+    return render(request, 'grabacion.html')
+
+def index_view(request):
+    return render(request, 'index.html')
+
+def inicio_view(request):
+    return render(request, 'inicio.html')
+
+def login_view(request):
+    return render(request, 'Login.html')
+
+def mi_producto_view(request):
+    return render(request, 'mi_producto.html')
+
+def mis_dispositivos_view(request):
+    return render(request, 'mis_dispositivos.html')
+
+def politica_view(request):
+    return render(request, 'politica.html')
+
+def preguntas_view(request):
+    return render(request, 'preguntas.html')
+
+def productos_view(request):
+    return render(request, 'Productos.html')
+
+def prueba_view(request):
+    return render(request, 'prueba.html')
+
+def recuperar_contra_view(request):
+    return render(request, 'recuperar_contra.html')
+
+def recursos_view(request):
+    return render(request, 'Recursos.html')
+
+def reg_event_view(request):
+    return render(request, 'reg_event.html')
+
+def registrarse_view(request):
+    return render(request, 'registrarse.html')
+
+def registro_view(request):
+    return render(request, 'registro.html')
+
+def soporte_view(request):
+    return render(request, 'soporte.html')
+
+def terminos_view(request):
+    return render(request, 'terminos.html')
+
+def ubicacion_view(request):
+    return render(request, 'ubicacion.html')
+
+def verificacion_permisos_view(request):
+    return render(request, 'verificacion_permisos.html')
+>>>>>>> b5ca5ef48d2ae9ff505b8711631613fc593d45d5
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6

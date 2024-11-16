@@ -1,6 +1,14 @@
 // src/components/RegisterSection.js
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+import { Link } from 'react-router-dom'; // Importa Link
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 import '../css/RegisterSection.css';
 import LoginImage from '../assets/img/Login.png';
 import BackImage from '../assets/img/atras.JPG';
@@ -9,10 +17,21 @@ const RegisterSection = () => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    const [errorMessage, setErrorMessage] = useState('');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         // Validaciones del formulario con alertas
         if (!username.match(/^[a-zA-Z0-9@.+-_]+$/)) {
             alert('Error: El nombre de usuario contiene caracteres no válidos.');
@@ -20,6 +39,18 @@ const RegisterSection = () => {
         }
         if (password.length < 8) {
             alert('Error: La contraseña debe tener al menos 8 caracteres.');
+<<<<<<< HEAD
+=======
+=======
+        // Validaciones del formulario
+        if (!username.match(/^[a-zA-Z0-9@.+-_]+$/)) {
+            setErrorMessage('El nombre de usuario contiene caracteres no válidos.');
+            return;
+        }
+        if (password.length < 8) {
+            setErrorMessage('La contraseña debe tener al menos 8 caracteres.');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             return;
         }
 
@@ -33,6 +64,10 @@ const RegisterSection = () => {
             const data = await response.json();
 
             if (response.ok) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                 alert('Registro exitoso. Redirigiendo a la página de inicio de sesión...');
                 window.location.href = '/login';
             } else {
@@ -45,6 +80,18 @@ const RegisterSection = () => {
             }
         } catch (error) {
             alert('Ocurrió un error. Intente de nuevo.');
+<<<<<<< HEAD
+=======
+=======
+                alert('Registro exitoso');
+                window.location.href = '/login';
+            } else {
+                setErrorMessage(data.error || 'Error en el registro. Intente de nuevo.');
+            }
+        } catch (error) {
+            setErrorMessage('Ocurrió un error. Intente de nuevo.');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         }
     };
 
@@ -56,7 +103,15 @@ const RegisterSection = () => {
             <div className="register-form-container">
                 <h2>Regístrese en Protect</h2>
                 <p className="text-center">
+<<<<<<< HEAD
                     ¿Ya tiene una cuenta? <Link to="/login">Inicie sesión</Link>
+=======
+<<<<<<< HEAD
+                    ¿Ya tiene una cuenta? <Link to="/login">Inicie sesión</Link>
+=======
+                ¿Ya tiene una cuenta? <Link to="/login">Inicie sesión</Link>
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                 </p>
 
                 <div className="social-buttons">
@@ -104,7 +159,15 @@ const RegisterSection = () => {
                             required
                         />
                     </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                    {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                     <button type="submit" className="btn btn-primary btn-block mt-3">Crear cuenta</button>
                 </form>
 

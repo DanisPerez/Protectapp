@@ -50,6 +50,13 @@ body {
     background-color: #6c757d;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 .loading-container {
     display: flex;
     justify-content: center;
@@ -65,6 +72,10 @@ body {
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 .table-striped tbody tr:hover {
     background-color: #e9ecef;
 }
@@ -101,3 +112,17 @@ body {
     cursor: pointer;
     color: #333;
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+.table-permisos {
+    margin-top: 20px;
+}
+
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+.table-striped tbody tr:hover {
+    background-color: #e9ecef;
+}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6

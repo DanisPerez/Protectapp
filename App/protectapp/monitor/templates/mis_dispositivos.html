@@ -1,0 +1,441 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect - Mis Dispositivos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f4f7fc;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #343a40;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        .sidebar .logo img {
+            width: 120px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+
+        .sidebar i {
+            margin-right: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styling */
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+<<<<<<< HEAD
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content-header h2 {
+            font-size: 24px;
+            font-weight: 600;
+=======
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .content-header h2 {
+            color: #343a40;
+            font-weight: bold;
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+<<<<<<< HEAD
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #495057;
+=======
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #495057;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .user-dropdown a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .user-dropdown a:hover {
+            background-color: #6c757d;
+        }
+
+        /* Devices section */
+        .dispositivos-section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #343a40;
+            color: #adb5bd;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+        }
+    </style>
+</head>
+
+<body>
+<<<<<<< HEAD
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Protect App Logo">
+        </div>
+        <a href="/inicio" class="active"><i class="fas fa-home"></i> Inicio</a>
+        <a href="/mis_dispositivos"><i class="fas fa-mobile-alt"></i> Mis Dispositivos</a>
+        <a href="/capturas"><i class="fas fa-camera"></i> Capturas</a>
+        <a href="/exportar_datos"><i class="fas fa-file-export"></i> Exportar Datos</a>
+        <a href="/verificacion_permisos"><i class="fas fa-shield-alt"></i> Verificación de Permisos</a>
+        <a href="/soporte"><i class="fas fa-question-circle"></i> Soporte</a>
+    </div>
+
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Mis Dispositivos</h2>
+            <div class="user-info">
+                <img src="{% static 'images/user-icon.png' %}" alt="User Icon" id="user-icon">
+                <div id="user-dropdown" class="dropdown-menu">
+                    <a href="/perfil">Perfil</a>
+                    <a href="#" id="cerrar-sesion">Cerrar Sesión</a>
+=======
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+<<<<<<< HEAD
+            <img src="{% static 'img/Protect2.png' %}" alt="Logo Protect">
+=======
+            <img src="{% static 'img/Protect1.png' %}" alt="Logo Protect">
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+        </div>
+        <a href="{% url 'inicio' %}"><i class="fas fa-home"></i> Inicio</a>
+        <a href="{% url 'mi_producto' %}"><i class="fas fa-box"></i> Mi Producto</a>
+        <a href="{% url 'cuenta' %}"><i class="fas fa-user"></i> Mi Cuenta</a>
+        <a href="{% url 'mis_dispositivos' %}" class="active"><i class="fas fa-laptop"></i> Mis Dispositivos</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Added Header Section -->
+        <div class="content-header">
+            <h2>Bienvenido</h2>
+            <div class="user-info">
+                <img src="{% static 'img/cuenta.png' %}" alt="User Icon" id="user-icon">
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="{% url 'cuenta' %}">Mi Cuenta</a>
+                    <a href="{% url 'login' %}" onclick="logout()">Cerrar Sesión</a>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+                </div>
+            </div>
+        </div>
+
+<<<<<<< HEAD
+        <div id="device-list">
+            <!-- Aquí se cargará la lista de dispositivos desde JavaScript -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/mis_dispositivos.js' %}"></script>
+=======
+        <h3>Mis Dispositivos</h3>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div class="text-right">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#addDeviceModal">Agregar Dispositivo</button>
+        </div>
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+
+        <!-- Section for Devices in Bootstrap Grid -->
+        <div class="dispositivos-section mt-4">
+            <div class="row" id="lista-dispositivos">
+                <!-- Aquí se cargarán los dispositivos -->
+            </div>
+        </div>
+    </div>
+
+<<<<<<< HEAD
+    <!-- Modal para Cambiar el Nombre del Dispositivo -->
+=======
+<<<<<<< HEAD
+    <!-- Modal para Cambiar el Nombre del Dispositivo -->
+=======
+<<<<<<< HEAD
+    <!-- Modal para Cambiar el Nombre del Dispositivo -->
+=======
+<<<<<<< HEAD
+    <!-- Add Device Modal -->
+=======
+    <!-- Modal para Cambiar el Nombre del Dispositivo -->
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+    <div class="modal fade" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="addDeviceModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+<<<<<<< HEAD
+                    <h5 class="modal-title" id="addDeviceModalLabel">Cambiar Nombre del Dispositivo</h5>
+=======
+<<<<<<< HEAD
+                    <h5 class="modal-title" id="addDeviceModalLabel">Cambiar Nombre del Dispositivo</h5>
+=======
+<<<<<<< HEAD
+                    <h5 class="modal-title" id="addDeviceModalLabel">Cambiar Nombre del Dispositivo</h5>
+=======
+<<<<<<< HEAD
+                    <h5 class="modal-title" id="addDeviceModalLabel">Agregar Nuevo Dispositivo</h5>
+=======
+                    <h5 class="modal-title" id="addDeviceModalLabel">Cambiar Nombre del Dispositivo</h5>
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-device-form">
+                        <div class="form-group">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            <label for="nombre-dispositivo">Nombre del dispositivo:</label>
+                            <input type="text" class="form-control" id="nombre-dispositivo" placeholder="Ingrese el nombre del dispositivo" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Dispositivo</button>
+=======
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+                            <label for="nombre-dispositivo">Nuevo nombre del dispositivo:</label>
+                            <input type="text" class="form-control" id="nombre-dispositivo" placeholder="Ingrese el nuevo nombre" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+                    </form>
+                    <div id="error-message" class="text-danger mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Protect. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/mis_dispositivos.js' %}"></script>
+    <script>
+        function logout() {
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}"; // Redirige a la página de inicio de sesión
+        }
+
+        $(document).ready(function () {
+            $('#user-icon').on('click', function () {
+                $('#user-dropdown').toggle();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('.user-info').length) {
+                    $('#user-dropdown').hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+=======
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/mis_dispositivos.js' %}"></script>
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470
+
+    <script>
+        // Función para alternar el despliegue del menú del usuario
+        document.getElementById('user-icon').addEventListener('click', function () {
+            const dropdown = document.getElementById('user-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+        });
+
+        // Cerrar el menú si se hace clic fuera de él
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('user-dropdown');
+            if (!event.target.closest('.user-info')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Función para cerrar sesión
+        function logout() {
+            // Eliminar los tokens del almacenamiento local
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('refresh_token');
+            alert("Has cerrado sesión.");
+            window.location.href = "{% url 'login' %}";
+        }
+
+        // Verificación de inicio de sesión
+        function checkLogin() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                alert('No has iniciado sesión. Redirigiendo a la página de inicio de sesión.');
+                window.location.href = "{% url 'login' %}";
+            }
+        }
+
+        // Llamar a la función de verificación al cargar la página
+        $(document).ready(function () {
+            checkLogin();
+        });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a8d19f143da4dcdf7a22fd08e935b212cf57580a
+>>>>>>> b4cb2bf817590ea6000bce461d5a50d14c9ce9b7
+>>>>>>> b0b9b03a14308048bdfe4ae811ef3107c4b0cc5e
+</html>
+>>>>>>> afc917d1d14c3730d6946130d053056968a08dc6
+>>>>>>> 6ed65ad7429d47b5a2bed51bfa4f1a8fd6c2a470

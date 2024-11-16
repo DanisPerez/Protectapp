@@ -80,27 +80,81 @@ body {
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 20px;
 }
+<<<<<<< HEAD
 /* Account.css */
+=======
+<<<<<<< HEAD
+/* Account.css */
+=======
+<<<<<<< HEAD
+/* Account.css */
+=======
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 .user-info {
     display: flex;
     align-items: center;
     position: relative;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     cursor: pointer;
 }
 
 .user-info img.user-icon {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+}
+.user-info img {
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
 }
 
 .user-dropdown {
+=======
+<<<<<<< HEAD
+}
+
+.user-dropdown {
+=======
+<<<<<<< HEAD
+}
+
+.user-dropdown {
+=======
+    cursor: pointer;
+}
+.user-dropdown {
+    display: none;
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     position: absolute;
     top: 60px;
     right: 0;
     background-color: #495057;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     border-radius: 5px;
     z-index: 1000;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -111,6 +165,19 @@ body {
     display: block; /* Hace visible el dropdown */
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 .user-dropdown a {
     color: #fff;
     padding: 10px 20px;
@@ -118,12 +185,34 @@ body {
     text-decoration: none;
     transition: background-color 0.3s;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 .user-dropdown a:hover {
     background-color: #6c757d;
 }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 /* Product Box */
 .product-box {
     background-color: #fff;

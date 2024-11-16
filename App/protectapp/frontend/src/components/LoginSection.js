@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+=======
+// src/components/LoginSection.js
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importa Link
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
 import '../css/LoginSection.css';
 import LoginImage from '../assets/img/Login.png';
 import BackImage from '../assets/img/atras.JPG';
@@ -7,6 +23,10 @@ import BackImage from '../assets/img/atras.JPG';
 const LoginSection = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
     const [showPassword, setShowPassword] = useState(false);
 
     const toggleShowPassword = () => {
@@ -22,20 +42,59 @@ const LoginSection = () => {
         }
 
         try {
+<<<<<<< HEAD
+=======
+=======
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (!email || !password) {
+            setErrorMessage('Por favor, completa todos los campos.');
+            return;
+        }
+        try {
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             const response = await fetch('http://localhost:8000/api/login/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+            const response = await fetch('/api/login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': 'csrftoken_placeholder', // Agregar el token CSRF si es necesario
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                 },
                 body: JSON.stringify({ email, password }),
             });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             if (response.ok) {
                 const data = await response.json();
                 localStorage.setItem('access_token', data.access);
                 window.location.href = '/inicio';
             } else {
                 const data = await response.json();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                 
                 if (data.detail === 'Correo no encontrado') {
                     alert('El correo electrónico no está registrado.');
@@ -48,13 +107,44 @@ const LoginSection = () => {
         } catch (error) {
             console.error('Error al iniciar sesión:', error);
             alert('Ocurrió un error. Intente nuevamente.');
+<<<<<<< HEAD
+=======
+=======
+                setErrorMessage(data.detail || 'Credenciales inválidas');
+            }
+=======
+            if (!response.ok) {
+                const data = await response.json();
+                setErrorMessage(data.detail || 'Credenciales inválidas');
+                return;
+            }
+
+            window.location.href = '/inicio';
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+        } catch (error) {
+            console.error('Error al iniciar sesión:', error);
+            setErrorMessage('Ocurrió un error. Intente nuevamente.');
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
         }
     };
 
     return (
         <section className="login-section">
             <div className="login-image">
+<<<<<<< HEAD
                 <img src={LoginImage} alt="Pantalla de inicio de sesión" className="img-fluid rounded" />
+=======
+<<<<<<< HEAD
+                <img src={LoginImage} alt="Pantalla de inicio de sesión" className="img-fluid rounded" />
+=======
+<<<<<<< HEAD
+                <img src={LoginImage} alt="Pantalla de inicio de sesión" className="img-fluid rounded" />
+=======
+            <img src={LoginImage} alt="Pantalla de inicio de sesión" className="img-fluid rounded" />
+>>>>>>> 93377ebfbcd26d14f6f4e8a0b8a9a9d138f8e145
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
             </div>
             <div className="login-form-container">
                 <h2>Inicie sesión con su ID de Protect</h2>
@@ -73,6 +163,10 @@ const LoginSection = () => {
                     </div>
                     <div className="form-group password-container">
                         <label htmlFor="password">Contraseña</label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                         <div className="password-wrapper">
                             <input
                                 type={showPassword ? 'text' : 'password'}
@@ -92,6 +186,22 @@ const LoginSection = () => {
                             </span>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+=======
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="password"
+                            name="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
+>>>>>>> 2f5224bd1b0c95acdfcd897b3ce2d8a61d63705f
+>>>>>>> a1388f7f955b60dcd506918f2bdf9313652780b6
                     <button type="submit" className="btn btn-primary btn-block mt-3">Iniciar Sesión</button>
                 </form>
                 <div className="text-center mt-4">
